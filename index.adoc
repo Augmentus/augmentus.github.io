@@ -197,7 +197,19 @@ You should see the AI Model Builder page similar to the figure above. Yours migh
 
 
 ==== Collecting Images
-* Users can either collect images by using the Camera Roll on their iPads or Transfer images to their photo gallery.
+* Collect the images using the Camera Roll on the iPad or transfer images to the photo gallery on the iPad.
+
+[NOTE]
+====
+. Ensure that the image formats are `.jpg`, `.jpeg`, or `.png` if you are transferring images into the iPad
+====
+
+[TIP]
+====
+. Take images of objects at various angles to improve model accuracy
+. Take images of objects with background of real environment to suppress false detections
+. Recommend around 30 images per class to train the model. However, if there are many classes, more than 30 images per class might be required.
+====
 
 ==== AI Model Creation 
 .Figure showing how to create a new model.
@@ -233,6 +245,11 @@ image::AITrainingLabelImage.png[width="800"]
 * Use the bottom slider to navigate to the different images.
 * Click on the `Back` button to return the AI Model Builder page.
 
+.Figure showing the number of images that are labelled in model.
+image::AITrainingNumberOfImagesLabelled.png[width="800"]
+* You can always save your current progress at any point and return later to label the images again.
+* The progress bar shows the number of images that have been labelled in the model.
+
 [TIP]
 ====
 . Leave small gaps between the bounding box and object when labelling.
@@ -244,10 +261,11 @@ image::AITrainingTrainModel.png[width="800"]
 * Click on 'Train' button to start training the model.
 * Click on the `Confirm` button to start training.
 
-
 [NOTE]
-Sending another Training Job of the same name will delete the previous `Model` of the same name.
-
+====
+. Each account is limited to training one model at a time. You cannot train multple models concurrently
+. Clickling on the `Train` button again when the model is already training will be discarded.
+====
 
 ==== Download Models
 .Figure showing how to download model.
