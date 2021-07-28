@@ -274,8 +274,7 @@ image::AITrainingDownloadModel.png[width="800"]
 * Click on the `Download` button to download the model onto the iPad
 
 // end::loadout[]
-====
-
+////
 === Robot Planning
 [#pathplanning]
 

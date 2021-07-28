@@ -463,7 +463,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_robot_planning">3.3. Robot Planning</a></li>
 <li><a href="#_download_robot_models_robot_models">3.4. Download Robot Models: <code>Robot Models</code></a></li>
 <li><a href="#_robot_loadout_loadout">3.5. Robot Loadout : <code>Loadout</code></a></li>
-<li><a href="#_ai_training_ai">3.6. AI Training : <code>ai</code></a></li>
+<li><a href="#_ai_training">3.6. AI Training</a></li>
 </ul>
 </li>
 <li><a href="#_faq">4. FAQ</a></li>
@@ -848,94 +848,25 @@ You can download your desired <code>Robot Model</code> by following the guide <a
 </div>
 </div>
 <div class="sect2">
-<h3 id="_ai_training_ai">3.6. AI Training : <code>ai</code></h3>
-<div class="sect3">
-<h4 id="ai">3.6.1. Collecting Images</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>Users can either collect images by using the Camera Roll on their iPads or Transfer images to their photo gallery.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_ai_model_creation">3.6.2. AI Model Creation</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>Navigate to the <code>AI</code> Tab by using the Navigation Sidebar shown <a href="#Legends2">here</a></p>
-</li>
-</ul>
+<h3 id="_ai_training">3.6. AI Training</h3>
+<div id="aitraining" class="paragraph">
+<p>AI Model Builder allows you to train machine learning models for object detection. To navigate to AI Model Builder page, click on the <code>Model Builder</code> Tab in the Navigation Sidebar.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/Aimodelcreation_1.png" alt="Aimodelcreation 1" width="800">
+<img src="images/AITrainingAIModelBuilder.png" alt="AITrainingAIModelBuilder" width="800">
 </div>
-<div class="title">Figure 11. Figure showing AI tab.</div>
+<div class="title">Figure 11. Figure show the page for AI training.</div>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>Click the <code>Add Model</code> button as shown in the top-right hand corner of the diagram above.</p>
-</li>
-</ul>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/Aimodelcreation_2.png" alt="Aimodelcreation 2" width="800">
-</div>
-<div class="title">Figure 12. Figure showing AI Create Popup.</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Input the <code>AI Model Name</code>. Then press the <code>Create</code> Button.</p>
-</li>
-<li>
-<p>After creating the Model, click the <code>Add Images</code> button as shown in the diagram above.</p>
-</li>
-</ul>
-</div>
+<div class="paragraph">
+<p>You should see the AI Model Builder page similar to the figure above. Yours might not have any models yet in the download section if you are using the application for the first time.</p>
 </div>
 <div class="sect3">
-<h4 id="_labelling_the_added_images">3.6.3. Labelling the Added Images</h4>
+<h4 id="_collecting_images">3.6.1. Collecting Images</h4>
 <div class="ulist">
 <ul>
 <li>
-<p>Click into the Model of interest.</p>
-</li>
-<li>
-<p>Start Labelling the added images and press the <code>Save</code> button before moving to the next image.</p>
-</li>
-<li>
-<p>Use the image slider to navigate to the different images added.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_model_training">3.6.4. Model Training</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>Navigate to the <code>AI</code> Tab by using the Navigation Sidebar shown <a href="#Legends2">here</a></p>
-</li>
-<li>
-<p>Click on the <code>Train</code> button for the model you want to train.</p>
-</li>
-<li>
-<p>Click on the <code>Confirm</code> button.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_download_models">3.6.5. Download Models</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>Click on the <code>Download</code> button for the model you want to download</p>
+<p>Collect the images using the Camera Roll on the iPad or transfer images to the photo gallery on the iPad.</p>
 </li>
 </ul>
 </div>
@@ -946,10 +877,238 @@ You can download your desired <code>Robot Model</code> by following the guide <a
 <div class="title">Note</div>
 </td>
 <td class="content">
-Sending another Training Job of the same name will delete the previous <code>Model</code> of the same name.
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Ensure that the image formats are <code>.jpg</code>, <code>.jpeg</code>, or <code>.png</code> if you are transferring images into the iPad</p>
+</li>
+</ol>
+</div>
 </td>
 </tr>
 </table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Take images of objects at various angles to improve model accuracy</p>
+</li>
+<li>
+<p>Take images of objects with background of real environment to suppress false detections</p>
+</li>
+<li>
+<p>Recommend around 30 images per class to train the model. However, if there are many classes, more than 30 images per class might be required.</p>
+</li>
+</ol>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_ai_model_creation">3.6.2. AI Model Creation</h4>
+<div class="imageblock">
+<div class="content">
+<img src="images/AITrainingCreateModel.png" alt="AITrainingCreateModel" width="800">
+</div>
+<div class="title">Figure 12. Figure showing how to create a new model.</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Click on the <code>New Model</code> button at the top-right hand corner of the page to create a new AI Model.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/AITrainingEnterModelName.png" alt="AITrainingEnterModelName" width="800">
+</div>
+<div class="title">Figure 13. Figure showing where to name the new model.</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Type the model&#8217;s name into the text field and click the <code>CREATE MODEL</code> button.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/AITrainingAddImage.png" alt="AITrainingAddImage" width="800">
+</div>
+<div class="title">Figure 14. Figure showing how to load images on iPad.</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Click the 'Add' button to load images located on the iPad.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/AITrainingSelectImages.png" alt="AITrainingSelectImages" width="800">
+</div>
+<div class="title">Figure 15. Figure showing how to select and add images to the model.</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Select images located on the iPad to add them to the newly created model.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_labelling_the_added_images">3.6.3. Labelling the Added Images</h4>
+<div class="imageblock">
+<div class="content">
+<img src="images/AITrainingClickModelToLabel.png" alt="AITrainingClickModelToLabel" width="800">
+</div>
+<div class="title">Figure 16. Figure showing how to load the model to label images.</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Click on the model to load and label the images.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/AITrainingLabelImage.png" alt="AITrainingLabelImage" width="800">
+</div>
+<div class="title">Figure 17. Figure showing how to label an image.</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Select the image in the bottom Slider to label.</p>
+</li>
+<li>
+<p>Drag to label the objects on the image with bounding boxes.</p>
+</li>
+<li>
+<p>Type in the name of the object</p>
+</li>
+<li>
+<p>Adjust the bounding box&#8217;s coordinates if necessary</p>
+</li>
+<li>
+<p>Click on the <code>Add</code> button to add the object newly labelled in the image.</p>
+</li>
+<li>
+<p>Click on the <code>Save</code> button to save the labelled objects and images.</p>
+</li>
+<li>
+<p>Use the bottom slider to navigate to the different images.</p>
+</li>
+<li>
+<p>Click on the <code>Back</code> button to return the AI Model Builder page.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/AITrainingNumberOfImagesLabelled.png" alt="AITrainingNumberOfImagesLabelled" width="800">
+</div>
+<div class="title">Figure 18. Figure showing the number of images that are labelled in model.</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>You can always save your current progress at any point and return later to label the images again.</p>
+</li>
+<li>
+<p>The progress bar shows the number of images that have been labelled in the model.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Leave small gaps between the bounding box and object when labelling.</p>
+</li>
+</ol>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_model_training">3.6.4. Model Training</h4>
+<div class="imageblock">
+<div class="content">
+<img src="images/AITrainingTrainModel.png" alt="AITrainingTrainModel" width="800">
+</div>
+<div class="title">Figure 19. Figure showing how to start training the model.</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Click on 'Train' button to start training the model.</p>
+</li>
+<li>
+<p>Click on the <code>Confirm</code> button to start training.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Each account is limited to training one model at a time. You cannot train multple models concurrently</p>
+</li>
+<li>
+<p>Clickling on the <code>Train</code> button again when the model is already training will be discarded.</p>
+</li>
+</ol>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_download_models">3.6.5. Download Models</h4>
+<div class="imageblock">
+<div class="content">
+<img src="images/AITrainingDownloadModel.png" alt="AITrainingDownloadModel" width="800">
+</div>
+<div class="title">Figure 20. Figure showing how to download model.</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The model will turn green when the training is completed</p>
+</li>
+<li>
+<p>Click on the <code>Download</code> button to download the model onto the iPad</p>
+</li>
+</ul>
 </div>
 </div>
 </div>
@@ -967,7 +1126,7 @@ Sending another Training Job of the same name will delete the previous <code>Mod
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2021-07-28 15:12:05 +0800
+Last updated 2021-07-28 16:31:43 +0800
 </div>
 </div>
 </body>
