@@ -188,26 +188,26 @@ image::LoadoutTCP.png[width="800"]
 
 === AI Training
 [#aitraining]
-AI Model Builder allows you to train machine learning models for object detection. To navigate to AI Model Builder page, click on the `Model Builder` Tab in the Navigation Sidebar.
+AI Model Builder allows you to train machine learning models. Currently, you will be able to customize models for object detection. To navigate to AI Model Builder page, click on the `Model Builder` tab in the navigation sidebar.
 
-.Figure show the page for AI training.
+.Figure showing the page for training AI models.
 image::AITrainingAIModelBuilder.png[width="800"]
 
 You should see the AI Model Builder page similar to the figure above. Yours might not have any models yet in the download section if you are using the application for the first time.
 
 
 ==== Collecting Images
-* Collect the images using the Camera Roll on the iPad or transfer images to the photo gallery on the iPad.
+* Collect the images using the iPad's camera or transfer images onto the iPad.
 
 [NOTE]
 ====
-. Ensure that the image formats are `.jpg`, `.jpeg`, or `.png` if you are transferring images into the iPad
+. Ensure that the image formats are `.jpg`, `.jpeg`, or `.png` if you are transferring images onto the iPad.
 ====
 
 [TIP]
 ====
-. Take images of objects at various angles to improve model accuracy
-. Take images of objects with background of real environment to suppress false detections
+. Take images of objects at various angles and backgrounds to improve model accuracy.
+. Take images of objects with background of real environment to suppress false detections.
 . Recommend around 30 images per class to train the model. However, if there are many classes, more than 30 images per class might be required.
 ====
 
@@ -218,37 +218,38 @@ image::AITrainingCreateModel.png[width="800"]
 
 .Figure showing where to name the new model.
 image::AITrainingEnterModelName.png[width="800"]
-* Type the model's name into the text field and click the `CREATE MODEL` button. 
+* Type the model's name in the text field.
+* Click the `CREATE MODEL` button. 
 
-.Figure showing how to load images on iPad.
+.Figure showing how to load images from iPad.
 image::AITrainingAddImage.png[width="800"]
-* Click the 'Add' button to load images located on the iPad.
+* Click the `Add` button to load images from the iPad.
 
 .Figure showing how to select and add images to the model.
 image::AITrainingSelectImages.png[width="800"]
-* Select images located on the iPad to add them to the newly created model.
+* Select images from the iPad to add them to the model.
 
 
 ==== Labelling the Added Images
 .Figure showing how to load the model to label images.
 image::AITrainingClickModelToLabel.png[width="800"]
-* Click on the model to load and label the images.
+* Click on the model to start labelling the images.
 
 .Figure showing how to label an image.
 image::AITrainingLabelImage.png[width="800"]
-* Select the image in the bottom Slider to label.
-* Drag to label the objects on the image with bounding boxes.
-* Type in the name of the object
-* Adjust the bounding box's coordinates if necessary
-* Click on the `Add` button to add the object newly labelled in the image.
+* Select the image in the bottom slider to start labelling.
+* Click and drag to draw bounding boxes arouond the objects on the image.
+* Type in the name of the object.
+* Adjust the bounding box's coordinates if necessary.
+* Click on the `Add` button to add the labelled object.
 * Click on the `Save` button to save the labelled objects and images.
 * Use the bottom slider to navigate to the different images.
 * Click on the `Back` button to return the AI Model Builder page.
 
 .Figure showing the number of images that are labelled in model.
 image::AITrainingNumberOfImagesLabelled.png[width="800"]
-* You can always save your current progress at any point and return later to label the images again.
-* The progress bar shows the number of images that have been labelled in the model.
+* Save your current progress at any point and return later to label the images again.
+* Track your progress of the number of labelled images for each model using the progress bar.
 
 [TIP]
 ====
@@ -258,20 +259,20 @@ image::AITrainingNumberOfImagesLabelled.png[width="800"]
 ==== Model Training
 .Figure showing how to start training the model.
 image::AITrainingTrainModel.png[width="800"]
-* Click on 'Train' button to start training the model.
+* Click on `Train` button to start training the model.
 * Click on the `Confirm` button to start training.
 
 [NOTE]
 ====
-. Each account is limited to training one model at a time. You cannot train multple models concurrently
-. Clickling on the `Train` button again when the model is already training will be discarded.
+. Limit to training one model at a time for each account so multple models cannot be trained concurrently.
+. Note that clickling on the `Train` button when the model is already training will not restart the training.
 ====
 
 ==== Download Models
 .Figure showing how to download model.
 image::AITrainingDownloadModel.png[width="800"]
-* The model will turn green when the training is completed
-* Click on the `Download` button to download the model onto the iPad
+* Note that the model will turn green when the training is completed successfully.
+* Click on the `Download` button to download the model onto the iPad.
 
 // end::loadout[]
 ////
