@@ -129,7 +129,7 @@ image::Pathplanning_1.png[width="800"]
 
 ==== Calibrating the Robot Position.
 
-*
+* Click on 
 
 // end::robotplanning[]
 
