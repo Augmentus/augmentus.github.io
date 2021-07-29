@@ -22,7 +22,7 @@ Augmentus is  a no-code and fully-integrated robotics platform that enables anyo
 
 //tag::introduction[]
 === An Introduction to Augmentus
-The following 2 diagrams (<<Legends1, Figure 1>>, <<Legends2, Figure 2>>, <<jj) highlight key
+The following 2 diagrams (<<Legends1, Figure 1>>, <<Legends2, Figure 2>>) highlight key
 sections of Augmentus's user interface. Refer to the description below each diagram for more information.
 
 [[LegendsOpened]]
