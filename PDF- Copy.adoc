@@ -1,0 +1,592 @@
+= Augmentus(AI) - User Guide
+:pdf-theme: 
+:site-section: UserGuide
+:toc: 
+:toclevels: 4
+:toc-title:
+:toc-placement: preamble
+:sectnums:
+:imagesDir: images
+:experimental:
+ifdef::env-github[]
+:tip-caption: :bulb:
+:note-caption: :information_source:
+endif::[]
+:repoURL: https://github.com/Augmentus/Augmentus-MainApp
+
+By: `Team Augmentus`      Since: `Nov 2019`      
+
+== Introduction
+
+Augmentus is  a no-code and fully-integrated robotics platform that enables anyone – even those with no robotic experience or programming skills – to develop, deploy and re-purpose robotic systems in minutes. We strive to help businesses recoup return on investment faster by drastically lowering the time, cost, and skill barriers in implementing robotic systems.
+
+//tag::introduction[]
+=== An Introduction to Augmentus
+The following 2 diagrams (<<Legends1, Figure 1>>, <<Legends2, Figure 2>>, <<Legend3, Figure 3>>) highlight key
+sections of Augmentus's user interface. Refer to the description below each diagram for more information.
+
+[[LegendsOpened]]
+[[Legends1]]
+.Augmentus GUI legends
+image::ProjectsLegend.png[width="800"]
+
+. As shown in the top-left hand corner of the diagram above, the Menu Button allows to user to have access to the <<Legends2, Sidebar>>, allowing you to navigate
+through to the other Augmentus features.
+. User can select the specific `Project` they want to work on by clicking onto the Robot Project.
+
+[[Legends2]]
+.Augmentus GUI legends (continued)
+image::Sidebar.png[width="800"]
+
+. As highlighted in diagram above, users can navigate to other features by using the navigation sidebar.
+
+[[Legend3]]
+.Augmentus GUI legends (continued)
+image::Offlinemodelegend.png[width="800"]
+
+* The image above shows the naming convention of the GUI button we will be using in <<robotplanning, robot planning>>.
+[[LegendsClosed]]
+//end::introduction[]
+
+=== Symbols used in this guide
+[NOTE]
+Denotes something that you may want to take note of.
+[TIP]
+Denotes something that may be helpful if you are having any difficulties.
+[WARNING]
+Denotes a warning for something critical.
+
+{zwsp} +
+{zwsp} +
+
+== Getting started
+
+.  Ensure you have both the `AugmentusApp` and `Augger` app installed on your Device.
+.  Click on the `AugmentusApp` to start the app. The Application should start immediately.
+.  Enter your Username and Password provided by Augmentus. +
+
+[NOTE]
+If you have trouble login in to your account. Please contact Augmentus Support at `support@augmentus.tech`
+
+== Features
+
+=== Augger `Scanner`
+// tag::scanning[]
+[#scanning]
+*Scanning*
+
+[NOTE]
+Make sure to attach the Calibration fixtures before scanning the Robot Environment
+
+. Select Augger app on the iPad to begin scanning.
+. Ensure the sensor is connected to the iPad.
+
+.Example of how to resize bounding box
+image::ScanningResize.png[width="800"]
+
+. Pinch to set scanning volume.
+. Click `Scan` to begin scanning.
+. Point the iPad at the area-of-interest and walk around slowly.
+
+.showing the save mesh button.
+image::PreScansave.png[width="800"]
+
+. Once the environment has been scanned, save the mesh by clicking on the save button.
+
+.showing the save mesh details.
+image::ScanPostSave.png[width="800"]
+
+. Enter your mesh name and press Confirm.
+
+.showing how to upload mesh to AugmentusApp.
+image::DragtoUploadMesh.png[width="800"]
+* Proceed onto the `AugmentusApp` and move to the `CAD/Mesh` tab. Your mesh will load automatically upon Dragging down on the Downloaded Section.
+// end::scanning[]
+
+[TIP]
+====
+. Move slowly during the scan and avoid sudden movement.
+. If the sample has dark surfaces, increase the exposure in Setting.
+. If the sample has reflective surfaces, use talcum powder or scanning spray like AESUB to apply a matt coating.
+. If tracking is lost, move back to the previous position or restart the scan.
+====
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+// tag::projectcreation[]
+[#createproject]
+=== Project Creation
+
+*Creating a Project*
+
+* Navigate to the `Project` Tab by using the Navigation Sidebar shown <<Legends2, here>>
+
+.Figure showing Add New Project button.
+image::Projectcreation_1.png[width="800"]
+
+* Click on the `Add New Project` button.
+
+.Figure showing Project Creation Popup.
+image::Projectcreation_2.png[width="800"]
+
+* Input the required details; `Project Name`, <<scanning, `Scanned Environment`>>, <<loadout, `Robot Loadout`>>, <<ai, `AI Model`>>. Then press the `Create` button.
+
+// end::projectcreation[]
+
+[#robotplanning]
+=== Robot Planning 
+// tag::robotplanning[]
+==== Opening the Project
+
+* Navigate to the `Project` Tab by using the Navigation Sidebar shown <<Legends2, here>>
+
+.Figure showing Project tab.
+image::Pathplanning_1.png[width="800"]
+
+* Click on the Project you want to work on.
+
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+
+==== Calibrating the Robot Position.
+
+.Figure showing Robot Calibration button.
+image::Calibratebutton.png[width="500"]
+
+* Click on the `Calibration` button to start Calibrating the Robot.
+
+.Figure showing Robot Calibration button.
+image::NewCalibrationTab.png[width="800"]
+
+* Click on the `New` Calibration button as shown on the image above.
+
+.Figure showing Robot Calibration.
+image::Calibrate1.png[width="800"]
+
+* Select the `Set Adaptor Sphere 1` button and click on the the bigger Sphere of the Fixture attached to the Robot.
+
+.Figure showing Robot Calibration(continued).
+image::Calibrate2.png[width="800"]
+
+* Select the `Set Adaptor Sphere 2` button and click on the the smaller Sphere of the Fixture attached to the Robot.
+
+.Figure showing Robot Calibration(continued).
+image::Calibrate3.png[width="800"]
+
+* Select the `Set Fixture Sphere 1` button and click on the bigger Sphere of the Calibration Fixture attached to the surface.
+* Next select the `Set Fixture Sphere 2` button and click on the smaller Sphere of the Calibration Fixture attached to the surface.
+* Finally, click on the `Calibrate` button.
+
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+
+==== Adding Waypoints
+* Drag the TCP Gimbal to your desired location.
+
+.showing how to add Robot Joint.
+image::AddJoint.png[width="800"]
+
+* Press the add joint button as shown above.
+[NOTE] 
+Users can reposition the waypoint to any point in the tree view by dragging it on the Sidebar to their desired location.
+[TIP]
+Plan and simulate periodically to make sure the Robot Path behave as what you expect.
+
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+
+==== Translating/ Rotating waypoints
+
+.Figure showing how to Translate.
+image::SelectWaypoints.png[width="800"]
+
+. Select the waypoints either through the `Treeview` or by clicking them directly.
+. Press the `Translate` / `Rotate` Button.
+
+.Figure showing how to Translate.
+image::GimbalTranslate.png[width="800"]
+
+* `Translate` / `Rotate` using the gimbal.
+
+[NOTE]
+You can translate multiple waypoints together at once.
+
+==== Adding AI Module
+
+.Figure showing Tree View Button.
+image::TreeViewButton.png[width="800"]
+
+* Open the Tree View by clicking the  `TreeView` button.
+
+.Figure showing Additional Modules Button on TreeView.
+image::AdditionalModules.png[width="800"]
+
+* Click on the `Additional Modules` button.
+
+.Figure showing AI Modules on the TreeView.
+image::AIModule.png[width="800"]
+
+* Select the `AI` module.
+
+.Figure showing button leading to AI Module Setting on the TreeView.
+image::AIModuleSetting.png[width="800"]
+
+* Click on the `AI` setting under the AI module to configure the `AI Settings`
+
+.Figure showing button leading to AI Module Setting on the TreeView.
+image::AISettings.png[width="800"]
+
+* Select the objects you would like the trained model to detect.
+
+[NOTE] 
+Any waypoints or modules added inside the AI Module will only activate when the trained object under the loaded AI model is detected.
+
+==== Adding Gripper Module
+
+.Figure showing Tree View Button.
+image::TreeViewButton.png[width="800"]
+
+* Open the Tree View by clicking the  `TreeView` button.
+
+.Figure showing Additional Modules Button on TreeView.
+image::AdditionalModules.png[width="800"]
+
+* Click on the `Additional Modules` button.
+
+.Figure showing Additional Modules Button on TreeView.
+image::AddGripperModule.png[width="800"]
+
+* Select the `Gripper` module and press Add.
+
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+
+==== Robot Live Control
+Move your robot in real time using the AugmentusApp.
+
+.Figure showing Robot Connection Button.
+image::RobotConnectionButton.png[width="800"]
+
+* Click on the Robot Connection button as shown on the diagram above.
+
+.Figure showing Robot Connection Setting.
+image::RobotConn.png[width="800"]
+
+. Enter your Robot IP address located on your Robot's pendant.
+
+. Press the `Connect` Button.
+
+.Figure showing Joints Configuration Button.
+image::JointsButton.png[width="800"]
+
+* Next click on the `Joint Configuration` Button as shown on the diagram above.
+
+.Figure showing Joints Configuration Setting.
+image::JointsSettings.png[width="800"]
+
+* Next click on the `Live` Button as shown on the diagram above.
+
+==== Plan and Send script to AI Controller
+Once you have created your desired robot path, you can plan and send it for real life robot simulation.
+
+.Figure showing Tree View Button.
+image::TreeViewButton.png[width="800"]
+
+. Firstly, click on the `TreeView` button as shown in the picture above .
+
+.showing Plan and Simulate buttons.
+image::AIPlanandPlay.png[width="800"]
+
+. Next press the `Plan` and wait for the planning to finish loading.
+. Click the `Simulate` button to simulate the robot path virtually.
+[WARNING] 
+Always simulate your robot path before sending it to the robot
+
+. Next, do a `Long Press` on the `Play` button to switch to `AI Mode`
+
+.showing AIController Setting.
+image::AIControllerSetting.png[width="800"]
+
+. Click on the AI Connection Setting and enter the IP Address Provided by Augmentus.
+. Enter your AI Controller details and press send. This will send the AI Model to the ai controller.
+[NOTE]
+Once you've send the AI Model once, you do not need to resend the AI Model in the future. +
+Contact support@augmentus.tech if you have trouble connecting to the AI Controller. 
+. Finally, click the Play button to send the Robot Script to the AIController for real life robot simulation.
+
+
+// end::robotplanning[]
+
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+
+=== Download Robot Models: `Robot Models`
+// tag::robotmodel[]
+[#robotmodel]
+
+* Navigate to the `Robot Models` Tab by using the Navigation Sidebar shown <<Legends2, here>>
+
+.Figure showing Loadout tab.
+image::robotmodeltab.png[width="800"]
+
+* Choose the Robot Model that you want to download and click download.
+
+// end::robotmodel[]
+
+=== Robot Loadout : `Loadout`
+// tag::loadout[]
+[#loadout]
+*Creating a Robot Loadout*
+
+
+* Navigate to the `Loadout` Tab by using the Navigation Sidebar shown <<Legends2, here>>
+
+.Figure showing Loadout tab.
+image::Loadouttab.png[width="800"]
+
+* Click on the `New Loadout` button as shown on the diagram above.
+* Click into the newly created `Loadout` to configure the settings.
+
+.Figure showing Robot Loadout tab.
+image::RobotLoadout.png[width="800"]
+
+* In the Robot Loadout, proceed to choose the Robot Model.
+[NOTE]
+You can download your desired `Robot Model` by following the guide <<robotmodel, here>>.
+
+.Figure showing Tool Loadout tab.
+image::Toolloadout.png[width="800"]
+
+* After choosing your Robot Model, you can insert your Tool tip (if any) by clicking on the tools in the `Tools Tab` as shown in the figure above.
+
+.Figure showing Tool Centre Point Calibration tab.
+image::LoadoutTCP.png[width="800"]
+
+* Users can also configure the TCP(Tool Centre Point) to their desired offset by Selecting the `TCP` tab.
+
+
+// end::loadout[]
+
+
+=== Save waypoints as template
+[#templating]
+Users can save waypoints from one project and load it in another project.
+
+.Figure showing Tree View Button.
+image::TreeViewButton.png[width="800"]
+
+. Click on the `TreeView` button.
+
+.Showing the template buttons.
+image::TemplateButtonNaming.png[width="800"]
+
+. Click on the `template` button.
+
+.Showing the template buttons(continued).
+image::TemplateButtonNaming.png[width="800"]
+
+. Enter a template name and press save.
+[NOTE]
+After saving the template, you can now load it in any project.
+
+=== AI Training
+[#aitraining]
+AI Model Builder allow users to train machine learning models that are used for object detection all within the `AugmentusApp`. Users can then integrate the ai model to their Robot Path Planning.
+To navigate to the AI Model Builder page, click on the `Model Builder` tab in the <<Legends2,navigation sidebar>>.
+
+.Figure showing the page for training AI models.
+image::AITrainingAIModelBuilder.png[width="800"]
+
+You should see the AI Model Builder page similar to the figure above. 
+
+
+==== Collecting Images
+* Collect the images using the iPad's camera or transfer images onto the iPad.
+
+[TIP]
+====
+. Take images of objects at various angles and backgrounds to improve model accuracy.
+. Take images of objects with background of real environment to suppress false detections.
+. Recommend around 30 images per class to train the model. However, if there are many classes, more than 30 images per class might be required.
+====
+
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+
+==== AI Model Creation 
+.Figure showing how to create a new model.
+image::AITrainingCreateModel.png[width="800"]
+* Click on the `New Model` button at the top-right hand corner of the page to create a new AI Model. 
+
+.Figure showing where to name the new model.
+image::AITrainingEnterModelName.png[width="800"]
+
+. Enter the model name in the text field.
+. Click the `Create Model` button.
+
+==== Insert Images to the model
+.Figure showing how to load images from iPad.
+image::AITrainingAddImage.png[width="800"]
+
+.Figure showing how to select and add images to the model.
+image::AITrainingSelectImages.png[width="800"]
+* Select images from the iPad to add them to the model.
+* Click the `Add` button to load images the selected images.
+
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+
+==== Labelling the Added Images
+.Figure showing how to load the model to label images.
+image::AITrainingClickModelToLabel.png[width="800"]
+* Click on the model to start labelling the images.
+
+.Figure showing how to label an image.
+image::AITrainingLabelImage.png[width="800"]
+* Select the image in the bottom slider to start labelling.
+* Click and drag to draw bounding boxes around the objects on the image.
+* Type in the name of the object.
+* Click on the `Add` button to add the labelled object.
+* Click on the `Save` button to save the labelled objects of the current image.
+* Use the bottom slider to navigate to the different images.
+* Click on the `Back` button to return the AI Model Builder page.
+[TIP]
+Avoid retyping the same object name by clicking on the names in the Archived object names list.
+
+.Figure showing the number of images that are labelled in model.
+image::AITrainingNumberOfImagesLabelled.png[width="800"]
+* Save your current progress at any point and return later to label the images again.
+* Track your progress of the number of labelled images for each model using the progress bar.
+
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+
+==== Model Training
+.Figure showing how to start training the model.
+image::AITrainingTrainModel.png[width="800"]
+* Click on `Train` button to start training the model.
+* Click on the `Confirm` button to start training.
+
+[NOTE]
+====
+. Users are limited to train one model at a time for each account, excess training jobs will be put in a queue.
+. Note that clickling on the `Train` button when the model is already training will not restart the training.
+====
+
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+
+==== Download Models
+.Figure showing how to download model.
+image::AITrainingDownloadModel.png[width="800"]
+* Note that the model will turn green when the training is completed successfully.
+* Click on the `Download` button to download the model onto the iPad.
+
+
+////
+== FAQ
+
+*Q*: How do I transfer my data to another Computer? +
+*A*: Install the app in the other computer and overwrite the empty data file it creates with the file that contains the data of your previous Notably folder.
+
+////
