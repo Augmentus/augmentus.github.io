@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+<body class="article">
 <div id="header">
 <h1>Augmentus(AI) - User Guide</h1>
 </div>
@@ -34,7 +35,7 @@ layout: default
 <li><a href="#_adding_ai_module">3.3.5. Adding AI Module</a></li>
 <li><a href="#_adding_gripper_module">3.3.6. Adding Gripper Module</a></li>
 <li><a href="#_robot_live_control">3.3.7. Robot Live Control</a></li>
-<li><a href="#_plan_and_send_to_ai_controller">3.3.8. Plan and Send to AI Controller</a></li>
+<li><a href="#_plan_and_send_script_to_ai_controller">3.3.8. Plan and Send script to AI Controller</a></li>
 </ul>
 </li>
 <li><a href="#_download_robot_models_robot_models">3.4. Download Robot Models: <code>Robot Models</code></a></li>
@@ -44,9 +45,10 @@ layout: default
 <ul class="sectlevel3">
 <li><a href="#_collecting_images">3.7.1. Collecting Images</a></li>
 <li><a href="#_ai_model_creation">3.7.2. AI Model Creation</a></li>
-<li><a href="#_labelling_the_added_images">3.7.3. Labelling the Added Images</a></li>
-<li><a href="#_model_training">3.7.4. Model Training</a></li>
-<li><a href="#_download_models">3.7.5. Download Models</a></li>
+<li><a href="#_insert_images_to_the_model">3.7.3. Insert Images to the model</a></li>
+<li><a href="#_labelling_the_added_images">3.7.4. Labelling the Added Images</a></li>
+<li><a href="#_model_training">3.7.5. Model Training</a></li>
+<li><a href="#_download_models">3.7.6. Download Models</a></li>
 </ul>
 </li>
 </ul>
@@ -223,7 +225,7 @@ Make sure to attach the Calibration fixtures before scanning the Robot Environme
 <p>Pinch to set scanning volume.</p>
 </li>
 <li>
-<p>Select Start to begin scanning.</p>
+<p>Click <code>Scan</code> to begin scanning.</p>
 </li>
 <li>
 <p>Point the iPad at the area-of-interest and walk around slowly.</p>
@@ -249,12 +251,12 @@ Make sure to attach the Calibration fixtures before scanning the Robot Environme
 </div>
 <div class="title">Figure 6. showing the save mesh details.</div>
 </div>
-<div class="ulist">
-<ul>
+<div class="olist arabic">
+<ol class="arabic">
 <li>
 <p>Enter your mesh name and press Confirm.</p>
 </li>
-</ul>
+</ol>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -299,8 +301,6 @@ Make sure to attach the Calibration fixtures before scanning the Robot Environme
 </div>
 <div class="sect2">
 <h3 id="createproject">3.2. Project Creation</h3>
-<div class="exampleblock">
-<div class="content">
 <div class="paragraph">
 <p><strong>Creating a Project</strong></p>
 </div>
@@ -338,8 +338,6 @@ Make sure to attach the Calibration fixtures before scanning the Robot Environme
 </ul>
 </div>
 </div>
-</div>
-</div>
 <div class="sect2">
 <h3 id="robotplanning">3.3. Robot Planning</h3>
 <div class="sect3">
@@ -360,7 +358,7 @@ Make sure to attach the Calibration fixtures before scanning the Robot Environme
 <div class="ulist">
 <ul>
 <li>
-<p>Select the Project you want to work on.</p>
+<p>Click on the Project you want to work on.</p>
 </li>
 </ul>
 </div>
@@ -369,7 +367,7 @@ Make sure to attach the Calibration fixtures before scanning the Robot Environme
 <h4 id="_calibrating_the_robot_position">3.3.2. Calibrating the Robot Position.</h4>
 <div class="imageblock">
 <div class="content">
-<img src="images/Calibratebutton.png" alt="Calibratebutton" width="800">
+<img src="images/Calibratebutton.png" alt="Calibratebutton" width="500">
 </div>
 <div class="title">Figure 11. Figure showing Robot Calibration button.</div>
 </div>
@@ -402,7 +400,7 @@ Make sure to attach the Calibration fixtures before scanning the Robot Environme
 <div class="ulist">
 <ul>
 <li>
-<p>Select the <code>Set Adaptor Sphere 1</code> button and click on the the smaller Sphere of the Fixture attached to the Robot.</p>
+<p>Select the <code>Set Adaptor Sphere 1</code> button and click on the the bigger Sphere of the Fixture attached to the Robot.</p>
 </li>
 </ul>
 </div>
@@ -415,7 +413,7 @@ Make sure to attach the Calibration fixtures before scanning the Robot Environme
 <div class="ulist">
 <ul>
 <li>
-<p>Select the <code>Set Adaptor Sphere 2</code> button and click on the the bigger Sphere of the Fixture attached to the Robot.</p>
+<p>Select the <code>Set Adaptor Sphere 2</code> button and click on the the smaller Sphere of the Fixture attached to the Robot.</p>
 </li>
 </ul>
 </div>
@@ -428,10 +426,10 @@ Make sure to attach the Calibration fixtures before scanning the Robot Environme
 <div class="ulist">
 <ul>
 <li>
-<p>Select the <code>Set Fixture Sphere 1</code> button and click on the smaller Sphere of the Calibration Fixture attached to the surface.</p>
+<p>Select the <code>Set Fixture Sphere 1</code> button and click on the bigger Sphere of the Calibration Fixture attached to the surface.</p>
 </li>
 <li>
-<p>Next select the <code>Set Fixture Sphere 2</code> button and click on the bigger Sphere of the Calibration Fixture attached to the surface.</p>
+<p>Next select the <code>Set Fixture Sphere 2</code> button and click on the smaller Sphere of the Calibration Fixture attached to the surface.</p>
 </li>
 <li>
 <p>Finally, click on the <code>Calibrate</code> button.</p>
@@ -446,6 +444,16 @@ Make sure to attach the Calibration fixtures before scanning the Robot Environme
 <li>
 <p>Drag the TCP Gimbal to your desired location.</p>
 </li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/AddJoint.png" alt="AddJoint" width="800">
+</div>
+<div class="title">Figure 16. showing how to add Robot Joint.</div>
+</div>
+<div class="ulist">
+<ul>
 <li>
 <p>Press the add joint button as shown above.</p>
 <div class="admonitionblock note">
@@ -467,7 +475,7 @@ Users can reposition the waypoint to any point in the tree view by dragging it o
 <div class="title">Tip</div>
 </td>
 <td class="content">
-Plan and simulate periodically to make sure
+Plan and simulate periodically to make sure the Robot Path behave as what you expect.
 </td>
 </tr>
 </table>
@@ -482,12 +490,12 @@ Plan and simulate periodically to make sure
 <div class="content">
 <img src="images/SelectWaypoints.png" alt="SelectWaypoints" width="800">
 </div>
-<div class="title">Figure 16. Figure showing how to Translate.</div>
+<div class="title">Figure 17. Figure showing how to Translate.</div>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Select the waypoints either through the <code>Treeview</code> or clicking them directly.</p>
+<p>Select the waypoints either through the <code>Treeview</code> or by clicking them directly.</p>
 </li>
 <li>
 <p>Press the <code>Translate</code> / <code>Rotate</code> Button.</p>
@@ -498,7 +506,7 @@ Plan and simulate periodically to make sure
 <div class="content">
 <img src="images/GimbalTranslate.png" alt="GimbalTranslate" width="800">
 </div>
-<div class="title">Figure 17. Figure showing how to Translate.</div>
+<div class="title">Figure 18. Figure showing how to Translate.</div>
 </div>
 <div class="ulist">
 <ul>
@@ -526,7 +534,7 @@ You can translate multiple waypoints together at once.
 <div class="content">
 <img src="images/TreeViewButton.png" alt="TreeViewButton" width="800">
 </div>
-<div class="title">Figure 18. Figure showing Tree View Button.</div>
+<div class="title">Figure 19. Figure showing Tree View Button.</div>
 </div>
 <div class="ulist">
 <ul>
@@ -539,7 +547,7 @@ You can translate multiple waypoints together at once.
 <div class="content">
 <img src="images/AdditionalModules.png" alt="AdditionalModules" width="800">
 </div>
-<div class="title">Figure 19. Figure showing Additional Modules Button on TreeView.</div>
+<div class="title">Figure 20. Figure showing Additional Modules Button on TreeView.</div>
 </div>
 <div class="ulist">
 <ul>
@@ -552,7 +560,7 @@ You can translate multiple waypoints together at once.
 <div class="content">
 <img src="images/AIModule.png" alt="AIModule" width="800">
 </div>
-<div class="title">Figure 20. Figure showing AI Modules on the TreeView.</div>
+<div class="title">Figure 21. Figure showing AI Modules on the TreeView.</div>
 </div>
 <div class="ulist">
 <ul>
@@ -565,7 +573,7 @@ You can translate multiple waypoints together at once.
 <div class="content">
 <img src="images/AIModuleSetting.png" alt="AIModuleSetting" width="800">
 </div>
-<div class="title">Figure 21. Figure showing button leading to AI Module Setting on the TreeView.</div>
+<div class="title">Figure 22. Figure showing button leading to AI Module Setting on the TreeView.</div>
 </div>
 <div class="ulist">
 <ul>
@@ -578,7 +586,7 @@ You can translate multiple waypoints together at once.
 <div class="content">
 <img src="images/AISettings.png" alt="AISettings" width="800">
 </div>
-<div class="title">Figure 22. Figure showing button leading to AI Module Setting on the TreeView.</div>
+<div class="title">Figure 23. Figure showing button leading to AI Module Setting on the TreeView.</div>
 </div>
 <div class="ulist">
 <ul>
@@ -606,7 +614,7 @@ Any waypoints or modules added inside the AI Module will only activate when the 
 <div class="content">
 <img src="images/TreeViewButton.png" alt="TreeViewButton" width="800">
 </div>
-<div class="title">Figure 23. Figure showing Tree View Button.</div>
+<div class="title">Figure 24. Figure showing Tree View Button.</div>
 </div>
 <div class="ulist">
 <ul>
@@ -619,7 +627,7 @@ Any waypoints or modules added inside the AI Module will only activate when the 
 <div class="content">
 <img src="images/AdditionalModules.png" alt="AdditionalModules" width="800">
 </div>
-<div class="title">Figure 24. Figure showing Additional Modules Button on TreeView.</div>
+<div class="title">Figure 25. Figure showing Additional Modules Button on TreeView.</div>
 </div>
 <div class="ulist">
 <ul>
@@ -632,7 +640,7 @@ Any waypoints or modules added inside the AI Module will only activate when the 
 <div class="content">
 <img src="images/AddGripperModule.png" alt="AddGripperModule" width="800">
 </div>
-<div class="title">Figure 25. Figure showing Additional Modules Button on TreeView.</div>
+<div class="title">Figure 26. Figure showing Additional Modules Button on TreeView.</div>
 </div>
 <div class="ulist">
 <ul>
@@ -651,12 +659,12 @@ Any waypoints or modules added inside the AI Module will only activate when the 
 <div class="content">
 <img src="images/RobotConnectionButton.png" alt="RobotConnectionButton" width="800">
 </div>
-<div class="title">Figure 26. Figure showing Robot Connection Button.</div>
+<div class="title">Figure 27. Figure showing Robot Connection Button.</div>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Click on the Robot Connectivity button as shown on the diagram above.</p>
+<p>Click on the Robot Connection button as shown on the diagram above.</p>
 </li>
 </ul>
 </div>
@@ -664,7 +672,7 @@ Any waypoints or modules added inside the AI Module will only activate when the 
 <div class="content">
 <img src="images/RobotConn.png" alt="RobotConn" width="800">
 </div>
-<div class="title">Figure 27. Figure showing Robot Connection Setting.</div>
+<div class="title">Figure 28. Figure showing Robot Connection Setting.</div>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -680,7 +688,7 @@ Any waypoints or modules added inside the AI Module will only activate when the 
 <div class="content">
 <img src="images/JointsButton.png" alt="JointsButton" width="800">
 </div>
-<div class="title">Figure 28. Figure showing Joints Configuration Button.</div>
+<div class="title">Figure 29. Figure showing Joints Configuration Button.</div>
 </div>
 <div class="ulist">
 <ul>
@@ -693,7 +701,7 @@ Any waypoints or modules added inside the AI Module will only activate when the 
 <div class="content">
 <img src="images/JointsSettings.png" alt="JointsSettings" width="800">
 </div>
-<div class="title">Figure 29. Figure showing Joints Configuration Setting.</div>
+<div class="title">Figure 30. Figure showing Joints Configuration Setting.</div>
 </div>
 <div class="ulist">
 <ul>
@@ -704,15 +712,15 @@ Any waypoints or modules added inside the AI Module will only activate when the 
 </div>
 </div>
 <div class="sect3">
-<h4 id="_plan_and_send_to_ai_controller">3.3.8. Plan and Send to AI Controller</h4>
+<h4 id="_plan_and_send_script_to_ai_controller">3.3.8. Plan and Send script to AI Controller</h4>
 <div class="paragraph">
-<p>Once you have created your desired robot path, you can plan and send it for real life simulation.</p>
+<p>Once you have created your desired robot path, you can plan and send it for real life robot simulation.</p>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="images/TreeViewButton.png" alt="TreeViewButton" width="800">
 </div>
-<div class="title">Figure 30. Figure showing Tree View Button.</div>
+<div class="title">Figure 31. Figure showing Tree View Button.</div>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -725,7 +733,7 @@ Any waypoints or modules added inside the AI Module will only activate when the 
 <div class="content">
 <img src="images/AIPlanandPlay.png" alt="AIPlanandPlay" width="800">
 </div>
-<div class="title">Figure 31. showing Plan and Simulate buttons.</div>
+<div class="title">Figure 32. showing Plan and Simulate buttons.</div>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -756,7 +764,7 @@ Always simulate your robot path before sending it to the robot
 <div class="content">
 <img src="images/AIControllerSetting.png" alt="AIControllerSetting" width="800">
 </div>
-<div class="title">Figure 32. showing AIController Setting.</div>
+<div class="title">Figure 33. showing AIController Setting.</div>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -799,7 +807,7 @@ Contact <a href="mailto:support@augmentus.tech">support@augmentus.tech</a> if yo
 <div class="content">
 <img src="images/robotmodeltab.png" alt="robotmodeltab" width="800">
 </div>
-<div class="title">Figure 33. Figure showing Loadout tab.</div>
+<div class="title">Figure 34. Figure showing Loadout tab.</div>
 </div>
 <div class="ulist">
 <ul>
@@ -811,9 +819,7 @@ Contact <a href="mailto:support@augmentus.tech">support@augmentus.tech</a> if yo
 </div>
 <div class="sect2">
 <h3 id="_robot_loadout_loadout">3.5. Robot Loadout : <code>Loadout</code></h3>
-<div id="loadout" class="exampleblock">
-<div class="content">
-<div class="paragraph">
+<div id="loadout" class="paragraph">
 <p><strong>Creating a Robot Loadout</strong></p>
 </div>
 <div class="ulist">
@@ -827,7 +833,7 @@ Contact <a href="mailto:support@augmentus.tech">support@augmentus.tech</a> if yo
 <div class="content">
 <img src="images/Loadouttab.png" alt="Loadouttab" width="800">
 </div>
-<div class="title">Figure 34. Figure showing Loadout tab.</div>
+<div class="title">Figure 35. Figure showing Loadout tab.</div>
 </div>
 <div class="ulist">
 <ul>
@@ -843,7 +849,7 @@ Contact <a href="mailto:support@augmentus.tech">support@augmentus.tech</a> if yo
 <div class="content">
 <img src="images/RobotLoadout.png" alt="RobotLoadout" width="800">
 </div>
-<div class="title">Figure 35. Figure showing Robot Loadout tab.</div>
+<div class="title">Figure 36. Figure showing Robot Loadout tab.</div>
 </div>
 <div class="ulist">
 <ul>
@@ -868,7 +874,7 @@ You can download your desired <code>Robot Model</code> by following the guide <a
 <div class="content">
 <img src="images/Toolloadout.png" alt="Toolloadout" width="800">
 </div>
-<div class="title">Figure 36. Figure showing Tool Loadout tab.</div>
+<div class="title">Figure 37. Figure showing Tool Loadout tab.</div>
 </div>
 <div class="ulist">
 <ul>
@@ -881,7 +887,7 @@ You can download your desired <code>Robot Model</code> by following the guide <a
 <div class="content">
 <img src="images/LoadoutTCP.png" alt="LoadoutTCP" width="800">
 </div>
-<div class="title">Figure 37. Figure showing Tool Centre Point Calibration tab.</div>
+<div class="title">Figure 38. Figure showing Tool Centre Point Calibration tab.</div>
 </div>
 <div class="ulist">
 <ul>
@@ -889,8 +895,6 @@ You can download your desired <code>Robot Model</code> by following the guide <a
 <p>Users can also configure the TCP(Tool Centre Point) to their desired offset by Selecting the <code>TCP</code> tab.</p>
 </li>
 </ul>
-</div>
-</div>
 </div>
 </div>
 <div class="sect2">
@@ -902,7 +906,7 @@ You can download your desired <code>Robot Model</code> by following the guide <a
 <div class="content">
 <img src="images/TreeViewButton.png" alt="TreeViewButton" width="800">
 </div>
-<div class="title">Figure 38. Figure showing Tree View Button.</div>
+<div class="title">Figure 39. Figure showing Tree View Button.</div>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -915,7 +919,7 @@ You can download your desired <code>Robot Model</code> by following the guide <a
 <div class="content">
 <img src="images/TemplateButtonNaming.png" alt="TemplateButtonNaming" width="800">
 </div>
-<div class="title">Figure 39. Showing the template buttons.</div>
+<div class="title">Figure 40. Showing the template buttons.</div>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -928,7 +932,7 @@ You can download your desired <code>Robot Model</code> by following the guide <a
 <div class="content">
 <img src="images/TemplateButtonNaming.png" alt="TemplateButtonNaming" width="800">
 </div>
-<div class="title">Figure 40. Showing the template buttons(continued).</div>
+<div class="title">Figure 41. Showing the template buttons(continued).</div>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -953,16 +957,17 @@ After saving the template, you can now load it in any project.
 <div class="sect2">
 <h3 id="_ai_training">3.7. AI Training</h3>
 <div id="aitraining" class="paragraph">
-<p>AI Model Builder allows you to train machine learning models. Currently, you will be able to customize models for object detection. To navigate to AI Model Builder page, click on the <code>Model Builder</code> tab in the navigation sidebar.</p>
+<p>AI Model Builder allow users to train machine learning models that are used for object detection all within the <code>AugmentusApp</code>. Users can then integrate the ai model to their Robot Path Planning.
+To navigate to the AI Model Builder page, click on the <code>Model Builder</code> tab in the <a href="#Legends2">navigation sidebar</a>.</p>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="images/AITrainingAIModelBuilder.png" alt="AITrainingAIModelBuilder" width="800">
 </div>
-<div class="title">Figure 41. Figure showing the page for training AI models.</div>
+<div class="title">Figure 42. Figure showing the page for training AI models.</div>
 </div>
 <div class="paragraph">
-<p>You should see the AI Model Builder page similar to the figure above. Yours might not have any models yet in the download section if you are using the application for the first time.</p>
+<p>You should see the AI Model Builder page similar to the figure above.</p>
 </div>
 <div class="sect3">
 <h4 id="_collecting_images">3.7.1. Collecting Images</h4>
@@ -972,24 +977,6 @@ After saving the template, you can now load it in any project.
 <p>Collect the images using the iPad&#8217;s camera or transfer images onto the iPad.</p>
 </li>
 </ul>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Ensure that the image formats are <code>.jpg</code>, <code>.jpeg</code>, or <code>.png</code> if you are transferring images onto the iPad.</p>
-</li>
-</ol>
-</div>
-</td>
-</tr>
-</table>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -1022,7 +1009,7 @@ After saving the template, you can now load it in any project.
 <div class="content">
 <img src="images/AITrainingCreateModel.png" alt="AITrainingCreateModel" width="800">
 </div>
-<div class="title">Figure 42. Figure showing how to create a new model.</div>
+<div class="title">Figure 43. Figure showing how to create a new model.</div>
 </div>
 <div class="ulist">
 <ul>
@@ -1035,52 +1022,51 @@ After saving the template, you can now load it in any project.
 <div class="content">
 <img src="images/AITrainingEnterModelName.png" alt="AITrainingEnterModelName" width="800">
 </div>
-<div class="title">Figure 43. Figure showing where to name the new model.</div>
+<div class="title">Figure 44. Figure showing where to name the new model.</div>
 </div>
-<div class="ulist">
-<ul>
+<div class="olist arabic">
+<ol class="arabic">
 <li>
-<p>Type the model&#8217;s name in the text field.</p>
+<p>Enter the model name in the text field.</p>
 </li>
 <li>
-<p>Click the <code>CREATE MODEL</code> button.</p>
+<p>Click the <code>Create Model</code> button.</p>
 </li>
-</ul>
+</ol>
 </div>
+</div>
+<div class="sect3">
+<h4 id="_insert_images_to_the_model">3.7.3. Insert Images to the model</h4>
 <div class="imageblock">
 <div class="content">
 <img src="images/AITrainingAddImage.png" alt="AITrainingAddImage" width="800">
 </div>
-<div class="title">Figure 44. Figure showing how to load images from iPad.</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Click the <code>Add</code> button to load images from the iPad.</p>
-</li>
-</ul>
+<div class="title">Figure 45. Figure showing how to load images from iPad.</div>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="images/AITrainingSelectImages.png" alt="AITrainingSelectImages" width="800">
 </div>
-<div class="title">Figure 45. Figure showing how to select and add images to the model.</div>
+<div class="title">Figure 46. Figure showing how to select and add images to the model.</div>
 </div>
 <div class="ulist">
 <ul>
 <li>
 <p>Select images from the iPad to add them to the model.</p>
 </li>
+<li>
+<p>Click the <code>Add</code> button to load images the selected images.</p>
+</li>
 </ul>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_labelling_the_added_images">3.7.3. Labelling the Added Images</h4>
+<h4 id="_labelling_the_added_images">3.7.4. Labelling the Added Images</h4>
 <div class="imageblock">
 <div class="content">
 <img src="images/AITrainingClickModelToLabel.png" alt="AITrainingClickModelToLabel" width="800">
 </div>
-<div class="title">Figure 46. Figure showing how to load the model to label images.</div>
+<div class="title">Figure 47. Figure showing how to load the model to label images.</div>
 </div>
 <div class="ulist">
 <ul>
@@ -1093,7 +1079,7 @@ After saving the template, you can now load it in any project.
 <div class="content">
 <img src="images/AITrainingLabelImage.png" alt="AITrainingLabelImage" width="800">
 </div>
-<div class="title">Figure 47. Figure showing how to label an image.</div>
+<div class="title">Figure 48. Figure showing how to label an image.</div>
 </div>
 <div class="ulist">
 <ul>
@@ -1101,25 +1087,34 @@ After saving the template, you can now load it in any project.
 <p>Select the image in the bottom slider to start labelling.</p>
 </li>
 <li>
-<p>Click and drag to draw bounding boxes arouond the objects on the image.</p>
+<p>Click and drag to draw bounding boxes around the objects on the image.</p>
 </li>
 <li>
 <p>Type in the name of the object.</p>
 </li>
 <li>
-<p>Adjust the bounding box&#8217;s coordinates if necessary.</p>
-</li>
-<li>
 <p>Click on the <code>Add</code> button to add the labelled object.</p>
 </li>
 <li>
-<p>Click on the <code>Save</code> button to save the labelled objects and images.</p>
+<p>Click on the <code>Save</code> button to save the labelled objects of the current image.</p>
 </li>
 <li>
 <p>Use the bottom slider to navigate to the different images.</p>
 </li>
 <li>
 <p>Click on the <code>Back</code> button to return the AI Model Builder page.</p>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">
+Avoid retyping the same object name by clicking on the names in the Archived object names list.
+</td>
+</tr>
+</table>
+</div>
 </li>
 </ul>
 </div>
@@ -1127,7 +1122,7 @@ After saving the template, you can now load it in any project.
 <div class="content">
 <img src="images/AITrainingNumberOfImagesLabelled.png" alt="AITrainingNumberOfImagesLabelled" width="800">
 </div>
-<div class="title">Figure 48. Figure showing the number of images that are labelled in model.</div>
+<div class="title">Figure 49. Figure showing the number of images that are labelled in model.</div>
 </div>
 <div class="ulist">
 <ul>
@@ -1139,32 +1134,14 @@ After saving the template, you can now load it in any project.
 </li>
 </ul>
 </div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Tip</div>
-</td>
-<td class="content">
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Leave small gaps between the bounding box and object when labelling.</p>
-</li>
-</ol>
-</div>
-</td>
-</tr>
-</table>
-</div>
 </div>
 <div class="sect3">
-<h4 id="_model_training">3.7.4. Model Training</h4>
+<h4 id="_model_training">3.7.5. Model Training</h4>
 <div class="imageblock">
 <div class="content">
 <img src="images/AITrainingTrainModel.png" alt="AITrainingTrainModel" width="800">
 </div>
-<div class="title">Figure 49. Figure showing how to start training the model.</div>
+<div class="title">Figure 50. Figure showing how to start training the model.</div>
 </div>
 <div class="ulist">
 <ul>
@@ -1186,7 +1163,7 @@ After saving the template, you can now load it in any project.
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Limit to training one model at a time for each account so multple models cannot be trained concurrently.</p>
+<p>Users are limited to train one model at a time for each account, excess training jobs will be put in a queue.</p>
 </li>
 <li>
 <p>Note that clickling on the <code>Train</code> button when the model is already training will not restart the training.</p>
@@ -1199,12 +1176,12 @@ After saving the template, you can now load it in any project.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_download_models">3.7.5. Download Models</h4>
+<h4 id="_download_models">3.7.6. Download Models</h4>
 <div class="imageblock">
 <div class="content">
 <img src="images/AITrainingDownloadModel.png" alt="AITrainingDownloadModel" width="800">
 </div>
-<div class="title">Figure 50. Figure showing how to download model.</div>
+<div class="title">Figure 51. Figure showing how to download model.</div>
 </div>
 <div class="ulist">
 <ul>
@@ -1223,7 +1200,7 @@ After saving the template, you can now load it in any project.
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2021-07-29 18:04:47 +0800
+Last updated 2021-07-29 20:08:02 +0800
 </div>
 </div>
 </body>

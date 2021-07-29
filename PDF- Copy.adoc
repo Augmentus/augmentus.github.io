@@ -56,8 +56,8 @@ Denotes something that may be helpful if you are having any difficulties.
 [WARNING]
 Denotes a warning for something critical.
 
-{zwsp} +
-{zwsp} +
+
+
 
 == Getting started
 
@@ -110,22 +110,22 @@ image::DragtoUploadMesh.png[width="800"]
 . If the sample has reflective surfaces, use talcum powder or scanning spray like AESUB to apply a matt coating.
 . If tracking is lost, move back to the previous position or restart the scan.
 ====
-{zwsp} +
-{zwsp} +
-{zwsp} +
-{zwsp} +
-{zwsp} +
-{zwsp} +
-{zwsp} +
-{zwsp} +
-{zwsp} +
-{zwsp} +
-{zwsp} +
-{zwsp} +
-{zwsp} +
-{zwsp} +
-{zwsp} +
-{zwsp} +
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // tag::projectcreation[]
 [#createproject]
 === Project Creation
@@ -158,11 +158,11 @@ image::Pathplanning_1.png[width="800"]
 
 * Click on the Project you want to work on.
 
-{zwsp} +
-{zwsp} +
-{zwsp} +
-{zwsp} +
-{zwsp} +
+
+
+
+
+
 {zwsp} +
 {zwsp} +
 {zwsp} +
