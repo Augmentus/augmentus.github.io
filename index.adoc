@@ -180,6 +180,21 @@ Users can reposition the waypoint to any point in the tree view by dragging it o
 [TIP]
 Plan and simulate periodically to make sure 
 
+==== Translating/ Rotating waypoints
+
+.Figure showing how to Translate.
+image::SelectWaypoints.png[width="800"]
+
+. Select the waypoints either through the `Treeview` or clicking them directly.
+. Press the `Translate` / `Rotate` Button.
+
+.Figure showing how to Translate.
+image::GimbalTranslate.png[width="800"]
+
+* `Translate` / `Rotate` using the gimbal.
+
+[NOTE]
+You can translate multiple waypoints together at once.
 
 ==== Adding AI Module
 
@@ -326,7 +341,6 @@ image::Toolloadout.png[width="800"]
 * After choosing your Robot Model, you can insert your Tool tip (if any) by clicking on the tools in the `Tools Tab` as shown in the figure above.
 
 .Figure showing Tool Centre Point Calibration tab.
-
 image::LoadoutTCP.png[width="800"]
 
 * Users can also configure the TCP(Tool Centre Point) to their desired offset by Selecting the `TCP` tab.
@@ -334,6 +348,27 @@ image::LoadoutTCP.png[width="800"]
 
 // end::loadout[]
 ====
+
+=== Save waypoints as template
+[#templating]
+Users can save waypoints from one project and load it in another project.
+
+.Figure showing Tree View Button.
+image::TreeViewButton.png[width="800"]
+
+. Click on the `TreeView` button.
+
+.Showing the template buttons.
+image::TemplateButtonNaming.png[width="800"]
+
+. Click on the `template` button.
+
+.Showing the template buttons(continued).
+image::TemplateButtonNaming.png[width="800"]
+
+. Enter a template name and press save.
+[NOTE]
+After saving the template, you can now load it in any project.
 
 === AI Training
 [#aitraining]
