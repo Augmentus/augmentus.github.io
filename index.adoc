@@ -109,23 +109,6 @@ image::DragtoUploadMesh.png[width="800"]
 . If the sample has reflective surfaces, use talcum powder or scanning spray like AESUB to apply a matt coating.
 . If tracking is lost, move back to the previous position or restart the scan.
 ====
-{sp} +
-{sp} +
-{sp} +
-{sp} +
-{sp} +
-{sp} +
-{sp} +
-{sp} +
-{sp} +
-{sp} +
-{sp} +
-{sp} +
-{sp} +
-{sp} +
-{sp} +
-{sp} +
-{sp} +
 
 // tag::projectcreation[]
 [#createproject]
