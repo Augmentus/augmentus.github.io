@@ -316,7 +316,7 @@ image::Loadouttab.png[width="800"]
 * Click into the newly created `Loadout` to configure the settings.
 
 .Figure showing Robot Loadout tab.
-image::Robotloadout.png[width="800"]
+image::RobotLoadout.png[width="800"]
 
 * In the Robot Loadout, proceed to choose the Robot Model.
 [NOTE]
