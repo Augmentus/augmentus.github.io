@@ -594,6 +594,18 @@ If you have trouble login in to your account. Please contact Augmentus Support a
 <div class="paragraph">
 <p><strong>Scanning</strong></p>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Make sure to attach the Calibration fixtures before scanning the Robot Environment
+</td>
+</tr>
+</table>
+</div>
 <div class="ulist">
 <ul>
 <li>
@@ -734,7 +746,109 @@ If you have trouble login in to your account. Please contact Augmentus Support a
 <div class="ulist">
 <ul>
 <li>
-<p>Click on</p>
+<p>Click on the <code>Calibration</code> button to start Calibrating the Robot.</p>
+</li>
+<li>
+<p>Select the <code>Set Adaptor Sphere 1</code> button and click on the the smaller Sphere of the Fixture attached to the Robot.</p>
+</li>
+<li>
+<p>Next Select the <code>Set Fixture Sphere 1</code> button and click on the smaller Sphere of the Calibration Fixture attached to the surface.</p>
+</li>
+<li>
+<p>Select the <code>Set Adaptor Sphere 2</code> button and click on the the bigger Sphere of the Fixture attached to the Robot.</p>
+</li>
+<li>
+<p>Next Select the <code>Set Fixture Sphere 2</code> button and click on the bigger Sphere of the Calibration Fixture attached to the surface.</p>
+</li>
+<li>
+<p>Finally, click on the <code>Calibrate</code> button.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_adding_waypoints">3.3.3. Adding Waypoints</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Drag the TCP Gimbal to your desired location.</p>
+</li>
+<li>
+<p>Press the add joint button as shown above.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Users can reposition the waypoint to any point in the tree view by dragging it on the Sidebar to their desired location.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">
+Plan and simulate periodically to make sure
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_adding_ai_module">3.3.4. Adding AI Module</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Open the Sidebar by clicking the  <code>SideBar</code> button.</p>
+</li>
+<li>
+<p>Click on the <code>Additional Modules</code> button.</p>
+</li>
+<li>
+<p>Select the <code>AI</code> module.</p>
+</li>
+<li>
+<p>Click on the <code>AI</code> setting under the AI module to configure the <code>AI Settings</code></p>
+</li>
+<li>
+<p>Select the objects you would like the trained model to detect.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Any waypoints or modules added inside the AI Module will only activate when the trained object under the loaded AI model is detected.
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_adding_gripper_module">3.3.5. Adding Gripper Module</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Open the <code>SideBar</code> button.</p>
+</li>
+<li>
+<p>Click on the <code>Additional Modules</code> button.</p>
+</li>
+<li>
+<p>Select the <code>Gripper</code> module</p>
 </li>
 </ul>
 </div>
@@ -1126,7 +1240,7 @@ You can download your desired <code>Robot Model</code> by following the guide <a
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2021-07-28 16:31:43 +0800
+Last updated 2021-07-29 09:47:07 +0800
 </div>
 </div>
 </body>

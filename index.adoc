@@ -1,6 +1,8 @@
 = Augmentus(AI) - User Guide
+:pdf-theme: 
 :site-section: UserGuide
-:toc:
+:toc: 
+:toclevels: 4
 :toc-title:
 :toc-placement: preamble
 :sectnums:
@@ -22,7 +24,7 @@ Augmentus is  a no-code and fully-integrated robotics platform that enables anyo
 
 //tag::introduction[]
 === An Introduction to Augmentus
-The following 2 diagrams (<<Legends1, Figure 1>>, <<Legends2, Figure 2>>) highlight key
+The following 2 diagrams (<<Legends1, Figure 1>>, <<Legends2, Figure 2>>, <<jj) highlight key
 sections of Augmentus's user interface. Refer to the description below each diagram for more information.
 
 [[LegendsOpened]]
@@ -40,6 +42,11 @@ image::Sidebar.png[width="800"]
 
 . As highlighted in diagram above, users can navigate to other features by using the navigation sidebar.
 
+[[Legend3]]
+.Augmentus GUI legends (continued)
+image::Offlinemodelegend.png[width="800"]
+
+* The image above shows the naming convention of the GUI button we will be using in <<robotplanning, robot planning>>.
 [[LegendsClosed]]
 //end::introduction[]
 
@@ -65,22 +72,35 @@ If you have trouble login in to your account. Please contact Augmentus Support a
 === Augger `Scanner`
 // tag::scanning[]
 [#scanning]
-====
 *Scanning*
 
-* Select Augger app on the iPad to begin scanning.
-* Ensure the sensor is connected to the iPad.
-* Pinch to set scanning volume.
+[NOTE]
+Make sure to attach the Calibration fixtures before scanning the Robot Environment
 
-image::PlaceHolder.png[width="800"]
+. Select Augger app on the iPad to begin scanning.
+. Ensure the sensor is connected to the iPad.
 
-* Adjust scanner settings for proper exposure and configuration.
-* Select Start to begin scanning.
-* Point the iPad at the area-of-interest and walk around slowly.
-* Once the environment has been scanned, save the mesh by clicking on the save button.
-* Proceed onto the `AugmentusApp`
+.Example of how to resize bounding box
+image::ScanningResize.png[width="800"]
+
+. Pinch to set scanning volume.
+. Select Start to begin scanning.
+. Point the iPad at the area-of-interest and walk around slowly.
+
+.showing the save mesh button.
+image::PreScansave.png[width="800"]
+
+. Once the environment has been scanned, save the mesh by clicking on the save button.
+
+.showing the save mesh details.
+image::ScanPostSave.png[width="800"]
+
+* Enter your mesh name and press Confirm.
+
+.showing how to upload mesh to AugmentusApp.
+image::DragtoUploadMesh.png[width="800"]
+* Proceed onto the `AugmentusApp` and move to the `CAD/Mesh` tab. Your mesh will load automatically upon Dragging down on the Downloaded Section.
 // end::scanning[]
-====
 
 [TIP]
 ====
@@ -90,8 +110,8 @@ image::PlaceHolder.png[width="800"]
 . If tracking is lost, move back to the previous position or restart the scan.
 ====
 
-=== Project Creation
 // tag::projectcreation[]
+=== Project Creation
 [#scanning]
 ====
 
@@ -109,16 +129,14 @@ image::Projectcreation_2.png[width="800"]
 
 * Input the required details; `Project Name`, <<scanning, `Scanned Environment`>>, <<loadout, `Robot Loadout`>>, <<ai, `AI Model`>>. Then press the `Create` button.
 
+====
 // end::projectcreation[]
 
-====
-
-=== Robot Planning 
-// tag::robotplanning[]
 [#robotplanning]
+=== Robot Planning 
+
+// tag::robotplanning[]
 ==== Opening the Project
-
-
 
 * Navigate to the `Project` Tab by using the Navigation Sidebar shown <<Legends2, here>>
 
@@ -129,7 +147,142 @@ image::Pathplanning_1.png[width="800"]
 
 ==== Calibrating the Robot Position.
 
-* Click on 
+.Figure showing Robot Calibration button.
+image::Calibratebutton.png[width="800"]
+
+* Click on the `Calibration` button to start Calibrating the Robot.
+
+.Figure showing Robot Calibration button.
+image::NewCalibrationTab.png[width="800"]
+
+* Click on the `New` Calibration button as shown on the image above.
+
+.Figure showing Robot Calibration.
+image::Calibrate1.png[width="800"]
+
+* Select the `Set Adaptor Sphere 1` button and click on the the smaller Sphere of the Fixture attached to the Robot.
+
+.Figure showing Robot Calibration(continued).
+image::Calibrate2.png[width="800"]
+
+* Select the `Set Adaptor Sphere 2` button and click on the the bigger Sphere of the Fixture attached to the Robot.
+
+.Figure showing Robot Calibration(continued).
+image::Calibrate3.png[width="800"]
+
+* Select the `Set Fixture Sphere 1` button and click on the smaller Sphere of the Calibration Fixture attached to the surface.
+* Next select the `Set Fixture Sphere 2` button and click on the bigger Sphere of the Calibration Fixture attached to the surface.
+* Finally, click on the `Calibrate` button. 
+
+==== Adding Waypoints
+* Drag the TCP Gimbal to your desired location.
+* Press the add joint button as shown above.
+[NOTE] 
+Users can reposition the waypoint to any point in the tree view by dragging it on the Sidebar to their desired location.
+[TIP]
+Plan and simulate periodically to make sure 
+
+
+==== Adding AI Module
+
+.Figure showing Tree View Button.
+image::TreeViewButton.png[width="800"]
+
+* Open the Tree View by clicking the  `TreeView` button.
+
+.Figure showing Additional Modules Button on TreeView.
+image::AdditionalModules.png[width="800"]
+
+* Click on the `Additional Modules` button.
+
+.Figure showing AI Modules on the TreeView.
+image::AIModule.png[width="800"]
+
+* Select the `AI` module.
+
+.Figure showing button leading to AI Module Setting on the TreeView.
+image::AIModuleSetting.png[width="800"]
+
+* Click on the `AI` setting under the AI module to configure the `AI Settings`
+
+.Figure showing button leading to AI Module Setting on the TreeView.
+image::AISettings.png[width="800"]
+
+* Select the objects you would like the trained model to detect.
+
+[NOTE] 
+Any waypoints or modules added inside the AI Module will only activate when the trained object under the loaded AI model is detected.
+
+==== Adding Gripper Module
+
+.Figure showing Tree View Button.
+image::TreeViewButton.png[width="800"]
+
+* Open the Tree View by clicking the  `TreeView` button.
+
+.Figure showing Additional Modules Button on TreeView.
+image::AdditionalModules.png[width="800"]
+
+* Click on the `Additional Modules` button.
+
+.Figure showing Additional Modules Button on TreeView.
+image::AddGripperModule.png[width="800"]
+
+* Select the `Gripper` module and press Add.
+
+==== Robot Live Control
+Move your robot in real time using the AugmentusApp.
+
+.Figure showing Robot Connection Button.
+image::RobotConnectionButton.png[width="800"]
+
+* Click on the Robot Connectivity button as shown on the diagram above.
+
+.Figure showing Robot Connection Setting.
+image::RobotConn.png[width="800"]
+
+. Enter your Robot IP address located on your Robot's pendant.
+
+. Press the `Connect` Button.
+
+.Figure showing Joints Configuration Button.
+image::JointsButton.png[width="800"]
+
+* Next click on the `Joint Configuration` Button as shown on the diagram above.
+
+.Figure showing Joints Configuration Setting.
+image::JointsSettings.png[width="800"]
+
+* Next click on the `Live` Button as shown on the diagram above.
+
+==== Plan and Send to AI Controller
+Once you have created your desired robot path, you can plan and send it for real life simulation.
+
+.Figure showing Tree View Button.
+image::TreeViewButton.png[width="800"]
+
+. Firstly, click on the `TreeView` button as shown in the picture above .
+
+.showing Plan and Simulate buttons.
+image::AIPlanandPlay.png[width="800"]
+
+. Next press the `Plan` and wait for the planning to finish loading.
+. Click the `Simulate` button to simulate the robot path virtually.
+[WARNING] 
+Always simulate your robot path before sending it to the robot
+
+. Next, do a `Long Press` on the `Play` button to switch to `AI Mode`
+
+.showing AIController Setting.
+image::AIControllerSetting.png[width="800"]
+
+. Click on the AI Connection Setting and enter the IP Address Provided by Augmentus.
+. Enter your AI Controller details and press send. This will send the AI Model to the ai controller.
+[NOTE]
+Once you've send the AI Model once, you do not need to resend the AI Model in the future. +
+Contact support@augmentus.tech if you have trouble connecting to the AI Controller. 
+. Finally, click the Play button to send the Robot Script to the AIController for real life robot simulation.
+
 
 // end::robotplanning[]
 
@@ -144,8 +297,6 @@ image::Pathplanning_1.png[width="800"]
 image::robotmodeltab.png[width="800"]
 
 * Choose the Robot Model that you want to download and click download.
-
-
 
 // end::robotmodel[]
 
@@ -273,542 +424,10 @@ image::AITrainingDownloadModel.png[width="800"]
 * The model will turn green when the training is completed
 * Click on the `Download` button to download the model onto the iPad
 
-// end::loadout[]
-////
-=== Robot Planning
-[#pathplanning]
-
-* `Paths` are used to specify the location of a note you want the `Command` to be pointed at.
-* There are 2 types of  `Path` namely:
-- AbsolutePath (which takes reference from the root, as shown in <<PathExample1, Figure 2>> below)
-- RelativePath (which takes reference from the current note)
-
-[NOTE]
-`/` represents a root note
-
-The `RelativePath` operates similarly to the command line input that you may be familiar with.
-Listed below are the notations used to define a `RelativePath`.
-
-* `.` (Point to current note)
-* `..` (Point to parent note)
-* `exampleNote` (Point to child node)
-
-**Validity of Paths**
-
-- AbsolutePath
-** Must start with the root note.
-** After every `/` you can provide a `Title` <<TitleValidity, (Valid Title)>>.
-** `/Workspace/2103T` is a valid `AbsolutePath`, `Workspace/2103T` is not.
-
-- Relative Path
-** Starts with `.` or `..` or a Title <<TitleValidity, (Valid Title)>>.
-** `./CS2103T/../CS2101`  is a valid `RelativePath`.
-
-**Example**
-
-The picture below helps to illustrate the use of `RelativePath` and `AbsolutePath`
-
-.Example to illustrate Path
-[[PathExample1]]
-image::UGPathDiagram.png[width="790"]
-
-The `AbsolutePath` `/Workspace/CS2101` is equivalent to `RelativePath` `../CS2101`
-
-Thus `open /Workspace/CS2101` and `open ../CS2101` would yield the same result.
-
-[NOTE]
-Paths are used by the `open` and `delete` command
-
-[NOTE]
-The Root simply serves as a way for Notably to hierarchically organise your notes. It will not be
-visible to you while you are using the application.
-
-[WARNING]
-You cannot delete the root note. e.g `Delete ../..` is invalid. An error message will be displayed to
-remind you of this.
-// end::pathplanning[]
-====
-
-=== View help : `help`
-
-If you can't remember the commands or you are unsure about what a particular command does, type `help` and hit kbd:[Enter].
-Figure 5 below shows you what this will look like on your screen.
-
-*Format:* `help`
-
-.Demo for the `help` command
-image::demo/Help1.png[]
-
-
-You will then see a Help window on your screen, as seen in Figure 4 below, which will include a summary of the commands and a link to Notably's User Guide. +
-
-.Demo for the `help` command (continued)
-image::demo/Help2.png[]
-
-[TIP]
-====
-* While the help modal is open, you can hold the kbd:[Up] and kbd:[Down] keys to scroll through it's contents. This is
-a more efficient solution than using your mouse!
-====
-
-=== Exit the program: `exit`
-
-If you're done with taking notes, use `exit` to close Notably straight from the command line. +
-
-*Format:* `exit`
-
-.Demo for the `exit` command
-image::demo/Exit.png[]
-
-// tag::new[]
-[#create]
-=== Create a new note: `new`
-
-If you want to add a new note (to the path of the currently open note), use the `new` command and specify the `TITLE` of the note. +
-
-*Format:* `new -t TITLE [-o]`
-
-[[TitleValidity]]
-[WARNING]
-====
-* Don't forget the `-t` flag!
-* The `TITLE` for the note MUST be specified.
-* The `TITLE` for the note can only contain alphabets, numbers, symbols (except / and -) and whitespaces.
-* The `TITLE` for the note cannot begin with whitespaces or the period `.` characer.
-* Duplicate notes are not allowed under the same note.
-** This is explained <<duplicateNotes, here>>
-====
-
-[TIP]
-====
-* Use the optional `-o` flag to immediately open the note after creating it.
-* Leaving out the `-o` open flag can be useful if you want to create multiple notes quickly for future use, but you don't need to edit them right away!
-* Want to save some time? Use the `n` shorthand instead of `new`
-** `n -t TITLE [-o]`
-====
-
-[#duplicateNotes]
-==== Creating duplicate notes
-Creating duplicate notes are not allowed as mentioned <<create, 3.3>>. What are considered duplicate notes? +
-
-* Two notes are considered duplicates IF their `TITLEs` are the same while ignore their case. For example:
-** `Hello`, `hello`, `HELLO` and `HeLLo` are considered duplicates
-** `hello world!`, `helloworld!` and `helloworld@` are **not** considered duplicates, because whitespaces and allowed symbols are not ignored
-* Two notes are considered duplicate IF they have the same `TITLE` under the **same note**. This can be seen in the following diagrams below:
-+
-[[Duplicate1]]
-.INVALID as there are duplicate notes under `/Workspace/CS2103`
-image::demo/PathDuplicates1.png[]
-[[Duplicate2]]
-.VALID as they are not both directly under `/Workspace/CS2103`
-image::demo/PathDuplicates2.png[]
-[[Duplicate3]]
-.VALID as one exists in `/Workspace/CS2103` and the other in `/Workspace/CS2101`
-image::demo/PathDuplicates3.png[]
-
-==== Example: Creating new notes
-. Let's first create a note (with a `TITLE`), and open it immediately after. Type this command: +
-
-    new -t Notably -o
-
-. Due to the `-o` flag, the currently open note is now `Notably` (as seen in the sidebar). Let's add a new note to the currently opened note, <<New2, (Step 2)>> with a `TITLE` as follows: +
-
-    new -t CS2103T
-
-+
-
-[NOTE]
-====
-* Observe that the (Absolute) Path to the currently open note is now changed from `/Workspace` in <<New1, step 1>> to `/Workspace/Notably` in  <<New2, step 2>>.
-** Not sure where to see this path? Check it out <<Legends1, here>>
-** Not sure what Absolute Paths are or why the new note is created in this way? Check it out <<paths, here>>
-====
-====
-====
-
-. The new note `CS2103T` has been created successfully!
-+
-[NOTE]
-====
-* Observe that the note `CS2103T` was not opened immediately as seen in <<New3, step 3>>
-** This is because the `-o` open flag was not specified, so the note `CS2103T` was created without opening it immediately.
-====
-
-[[New1]]
-.Step 1 - Create a new note with the title "Notably" (with the `-o` open flag)
-image::demo/New1.png[]
-[[New2]]
-.Step 2 - Create a new note with the title "CS2103T" (without the `-o` open flag)
-image::demo/New2.png[]
-[[New3]]
-.Step 3 - Final state after creating both notes
-image::demo/New3.png[]
-//end::new[]
-
-//tag::open[]
-=== Open an existing note: `open`
-
-You can open an existing note by specifying its absolute or relative <<paths, path>>). +
-
-*Format:* `open [-t] AbsolutePath/Relativepath` +
-
-[TIP]
-====
-* If you want to save some keypresses, omit the optional `-t` flag. It still works fine!
-====
-
-==== Example: Opening a note
-. Let's open the note `Notably` that exists in the currently opened note `Workspace` <<Open, (Step 1)>> with the command: +
-
-    open -t Notably
-
-[NOTE]
-====
-* Notably gives you some useful suggestions on other paths that are similar or related to your input!
-====
-[[Open]]
-.Step 1 - Demo for the `open` command (with suggestions)
-image::demo/Open.png[]
-
-//end::open[]
-//tag::editing[]
-=== Edit an existing note: `edit`
-
-If you want to change the `BODY` content of the currently opened note, use the `edit` command. This command *opens* an editing window where you can update the existing `BODY` of the note.
-
-*Format:* `edit`
-
-==== Example: Editing the currently opened note
-. As shown in <<EditStep1, Step 1>>, let's update the `BODY` content of the currently opened note `Workspace` with the command: +
-
-    edit
-
-. An Edit modal will appear on your screen, as shown in <<EditStep2, Step 2>>. You will now be able to edit the
-content of the currently open note.
-
-. Once done, press kbd:[Esc] to close the modal. Any changes made to the content
-of the note are automatically saved when you do so.
-
-[[EditStep1]]
-.Step 1 - Demo for the `edit` command (Typing the edit command)
-image::demo/Edit1.png[]
-
-[[EditStep2]]
-.Step 2 - Demo for the `edit` command (Interacting with the Edit modal)
-image::demo/Edit2.png[]
-
-[TIP]
-====
-* Instead of editing a note in plain text, leverage Notably's <<Markdown, Markdown>> feature to better organise
-the text in your note!
-* You can copy and paste text in the edit modal, as per the conventional keyboard shortcuts kbd:[CMD/CTRL] + kbd:[c] and
-kbd:[CMD/CTRL] + kbd:[v] respectively.
-====
-
-[WARNING]
-====
-* You are not allowed to `edit` the root note, i.e when your currently opened path is ``"/"``
-====
-//end:editing[]
-
-//tag::delete[]
-=== Delete a note: `delete`
-
-If you no longer need a note, or if you have accidentally created a wrong note, don't worry! You can always delete that note. +
-
-*Format:* `delete [-t] AbsolutePath/RelativePath`
-[NOTE]
-====
-* Requires prior understanding of `AbsolutePath` and `RelativePath`. You can refer <<paths, here>> for an explanation
-====
-
-[WARNING]
-====
-* Deleting a note will also delete its child notes. Be very careful! You can refer to the example below for an illustration
-* Deleting the root note (i.e. `delete /`) is prohibited.
-====
-
-[TIP]
-====
-* You can delete the currently open note using the command `delete .`
-** Refer to <<deleteCurrent, example 3.6.2>>
-* Want to save some time? Drop the optional `-t` flag and use the `d` shorthand instead of `delete`
-** `d AbsolutePath/RelativePath`
-====
-
-==== Example: Deleting a note under the currently open note
-. Let's delete the `Notably` note using this command:
-
-    delete -t Notably
-+
-[NOTE]
-====
-* The currently open note is `Workspace`
-* The above example uses `RelativePath`. You can achieve the same result as above by using an `AbsolutePath` instead by executing `delete -t /Workspace/Notably`.
-** Not sure about `AbsolutePath` and `RelativePath`? You can refer <<paths, here>> for a clearer explanation
-====
-
-. The note with the title `Notably` is deleted successfully since it exists!
-+
-[WARNING]
-====
-* `Another Note`, `CS2103` and `ST2334` are immediately deleted as well since they are notes under `Notably`
-====
-+
-.Step 1 - Key in the example command
-image::demo/Delete1.png[]
-+
-.Final state after deletion
-image::demo/Delete2.png[]
-
-[#deleteCurrent]
-==== Deleting the currently open note
-. In this example, `Notably` is the currently open note. Let's delete it using the command:
-
-    delete .
-+
-[NOTE]
-====
-* The `.` in the command is a `RelativePath` that points to the path of the currently open note
-====
-+
-. `Notably` note is deleted and the currently open note is now `Workspace`
-+
-[NOTE]
-====
-* This will change the currently open note to the deleted note's parent note
-====
-+
-.Step 1 - Key in the example command
-image::demo/Delete3.png[]
-+
-.Final state after deletion
-image::demo/Delete2.png[]
-//end::delete[]
-
-//tag::search[]
-=== Find a note based on certain keywords: `search`
-
-If you need to look for a note that contains a specific keyword in its *content*, use the `search` command and Notably
-will show you the search results sorted by the number of matches in the note. The note with the highest number of match will be
-at the top of the list, so that you can access it faster. +
-*Format:* `search [-s] KEYWORD`
-
-[NOTE]
-====
-* `search` looks through *all* the notes that you have
-* Partial matches work as well! It means that when you have a set of notes containing the word "lecture" but no "lect" as a word on its own,
-you can just type `search lect` and Notably will still show you a list of notes containing the word "lecture", as "lect" is part of the word "lecture".
-* Matches are case insensitive, meaning it will find the word no matter if it is in uppercase or lowercase or even mixed-case
-====
-
-==== Example: Searching for the keyword "Computer science"
-Let's look for the keyword "Computer science" if it exists in any of the notes that you have saved in Notably. +
-
-`search -s Computer science`
-
-If the word "Computer science" exists, a list of suggestions will be generated. This list will be sorted in descending order
-of the number of matches, i.e. the note with the highest number of matches will be at the top of the list, as seen in the figure below.
-
-.Demo for the `search` command: keyword found
-image::demo/Search.png[]
-
-Let's say the first option `/Workspace/Notably/CS2103/Project` is the note you are looking for. You may press kbd:[↓] and kbd:[Enter]
-to open the note. The figure below illustrates how the note chosen will be opened and the command line box is cleared.
-
-.Demo for the `search` command: open a note with the searched keyword
-image::demo/Search1.png[]
-
-If the keyword you are looking for does not exist in any of your notes, no suggestions will be generated, as seen in the figure below.
-
-.Demo for the `search` command: keyword not found
-image::demo/Suggestions4.png[]
-// end::search[]
-
-=== Save the data
-
-Your notes are saved in the hard disk automatically after any command that changes the data. There is no need for you to save manually! +
-
-Also, your currently opened note and window size (of Notably) is also saved every time it changes so that you can continue where you left off the next time you start Notably!
-
-//tag::suggestions[]
-=== Auto suggestions
-
-As you type, Notably will provide you with suggestions. You can press the keyboard kbd:[↓] button followed by kbd:[Enter] to select any suggestion in the list.
-
-For example, as you type `open -t Notably`, a list of suggestions will be generated as seen in the figure below.
-
-.Demo for the suggestions feature: Suggestions are generated as the user keys in his input
-image::demo/Suggestions.png[]
-
-Let's say you would like to choose the option `/Workspace/Notably/Another Note`. After pressing kbd:[↓] to reach that suggestion
-and pressing kbd:[Enter], the command input line will be auto-filled by the suggestion, as seen in the figure below.
-
-.Demo for the suggestions feature: The user input is auto-completed when the user selects a suggestion
-image::demo/Suggestions2.png[]
-
-If no suggestion list is generated for the command `open`, `delete` or `search`, it means the path, title, or keyword cannot be found
-anywhere in Notably, as seen in the figures below.
-
-.Demo for the suggestions feature: The user inputs a path/ title that does not exist in his Notably app, thus no suggestion list is generated
-image::demo/Suggestions3.png[]
-
-.Demo for the suggestions feature: The user inputs a keyword that does not exist in any of his notes, thus no suggestion list is generated
-image::demo/Suggestions4.png[]
-
-==== (Coming in v2.0) Suggestion response text when opening or deleting a parent note
-Variations of path with `../` (e.g. `open ../`, `open Note/../Note`, etc.) will not generate a comprehensive response text.
-Currently, typing `open ../` will generate a response text of `Open a note titled "../"` instead of `Open a parent note`.
-// end::suggestions[]
-
-// tag::correction[]
-
-=== Auto correction
-
-Notably will try its best to correct your mistypes automatically, as long as your mistyped inputs are not too far away from the understood commands. This provides you with a more fluid typing experience!
-
-Notably's auto correction feature works on two aspects of your typing:
-
-. It auto corrects command names, where command names refers to `open`, `search`, `delete`, `edit`, and others. For example, Notably will correct the mistyped command name `opne` to `open`.
-. It auto corrects the `Paths` of notes. For example, depending on the notes that exist in your database, Notably might correct `/Notaby` to `/Notably`.
-
-See the example below for more information.
-
-==== Example: Auto correcting user input
-
-[NOTE]
-Even though the user types in the command name `opne`, Notably is still able to recognise this as an `open` command. +
-In addition, the inputted `RelativePath` `Notaby` is understood by Notably, even though there's no note in the database with the title `Notaby`. Instead, there exists a note in the database with the `RelativePath` `Notably`. +
-After corrections are done, a list of suggestions will be generated as if the user has inputted `open -t Notably`!
-
-.Demo for the auto correction feature
-image::demo/Correction.png[]
-
-// end::correction[]
-
-//tag::responsetext[]
-=== Response text
-Notably also displays a response text which enables you to understand the meaning of the input you type and shows
-an error message when your input is invalid.
-
-For example, if you type `open /CS`, the response text will indicates that you are trying to `Open a note titled "/CS"`,
-as seen in the figure below.
-
-.Demo for the response text feature: open command
-image::demo/ResponseText1.png[]
-
-On the other hand, if you key in an invalid command, the response text will display an error message as seen in the figure
-below.
-
-.Demo for the response text feature: invalid command
-image::demo/ResponseText2.png[]
-//end::responsetext[]
-
-// tag::markdown[]
-
-[[Markdown]]
-=== Markdown (GitHub Flavored Markdown)
-
-[NOTE]
-We use the term Markdown and GitHub Flavored Markdown interchangably in this document.
-
-Notably supports basic https://guides.github.com/features/mastering-markdown/[GitHub Flavored Markdown (GFM)] as the `BODY` content of a note.
-By supporting Markdown, we hope to enhance your typing experience even further. You can simply type your note in Markdown, and it'll take care of displaying the content of your note in a nice layout for you.
-
-Currently supported syntax of GitHub Flavored Markdown in Notably consists of:
-
-* https://github.github.com/gfm/#atx-heading[ATX headings] +
-----
-# Level 1 header
-## Level 2 header
-### Level 3 header
-#### Level 4 header
-##### Level 5 header
-###### Level 6 header
-----
-* https://github.github.com/gfm/#list[Lists] and https://github.github.com/gfm/#list-items[List items] +
-[IMPORTANT]
-Currently, only unordered lists are supported. In addition, only the hyphen `-` symbol is supported to be used as the list bullets. +
-----
-- List item
-- Another list item
-- A nested list item
-- A deeper nested list item
-- Last list item
-----
-* https://github.github.com/gfm/#paragraph[Paragraphs] +
-----
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-Proin dictum accumsan nunc sed feugiat.
-----
-
-==== Example: Writing your note in Markdown
-
-For example, you might write your note as follows:
-
-----
-# Hello Notably
-
-Notably is for those who prefer to use a desktop app for managing notes.
-More importantly, Notably is optimized for those who prefer to work with a Command Line Interface (CLI) while still having the benefits of a Graphical User Interface (GUI).
-
-## Getting started
-
-- Ensure you have Java `11` or above installed in your Computer.
-- Download the latest https://github.com/AY1920S2-CS2103T-W17-2/main/releases[notably.jar]
-- Double-click the file to start the app. The Application should start in a few seconds.
-----
-
-==== (Coming in v2.0) More complete support of Markdown syntax
-
-In our v2.0 release, we'll be supporting the following additional Markdown syntax:
-
-* https://github.github.com/gfm/#emphasis-and-strong-emphasis[Emphasis and strong emphasis] +
-----
-*This text will get italicised*
-**This text will get bold**
-----
-* https://github.github.com/gfm/#strikethrough-extension-[Strikethrough] +
-----
-~~This text will get a strikethrough treatment~~
-----
-
-// end::markdown[]
-
-=== Sidebar
-The sidebar is where you can see your notes in a neatly organised way, reminiscent of a file browser in an Operating System. +
-
-[NOTE]
-====
-* The sidebar only shows up to 3 levels of notes at a single time.
-** The 3 levels will compromise of the:
-*** currently open note and its siblings
-*** its parent note
-*** its children notes
-** This will be demonstrated in the following diagrams, with `Workspace` as the level 1 note
-*** There is no level 0 note (root) that is displayed in the sidebar
-
-====
-
-.Before and after opening a level 2 note
-image::demo/Sidebar.png[]
-
-.Before and after opening a level 3 note
-image::demo/Sidebar2.png[]
 ////
 == FAQ
 
 *Q*: How do I transfer my data to another Computer? +
 *A*: Install the app in the other computer and overwrite the empty data file it creates with the file that contains the data of your previous Notably folder.
 
-////
-== Command Summary
-
-* *View help*: `help`
-* *Exit the program*: `exit`
-* *Create a new note*: `new -t TITLE [-o]`
-* *Open an existing note*: `open [-t] AbsolutePath/Relativepath`
-* *Opens an editing window to edit the currently opened note*: `edit`
-* *Delete a note*: `delete [-t] AbsolutePath/Relativepath`
-* *Find a note based on certain keywords*: `search [-s] KEYWORD`
 ////
