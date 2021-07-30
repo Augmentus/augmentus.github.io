@@ -163,20 +163,20 @@ image::Pathplanning_1.png[width="800"]
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
 
 ==== Calibrating the Robot Position.
 
@@ -207,23 +207,23 @@ image::Calibrate3.png[width="800"]
 * Next select the `Set Fixture Sphere 2` button and click on the smaller Sphere of the Calibration Fixture attached to the surface.
 * Finally, click on the `Calibrate` button.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
 
 ==== Adding Waypoints
 * Drag the TCP Gimbal to your desired location.
@@ -237,21 +237,21 @@ Users can reposition the waypoint to any point in the tree view by dragging it o
 [TIP]
 Plan and simulate periodically to make sure the Robot Path behave as what you expect.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
 
 ==== Translating/ Rotating waypoints
 
@@ -316,10 +316,10 @@ image::AddGripperModule.png[width="800"]
 
 * Select the `Gripper` module and press Add.
 
-
-
-
-
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
 
 ==== Robot Live Control
 Move your robot in real time using the AugmentusApp.
@@ -377,14 +377,14 @@ Contact support@augmentus.tech if you have trouble connecting to the AI Controll
 
 // end::robotplanning[]
 
-
-
-
-
-
-
-
-
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
 
 === Download Robot Models: `Robot Models`
 // tag::robotmodel[]
@@ -476,12 +476,12 @@ You should see the AI Model Builder page similar to the figure above.
 . Recommend around 30 images per class to train the model. However, if there are many classes, more than 30 images per class might be required.
 ====
 
-
-
-
-
-
-
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
 
 ==== AI Model Creation 
 .Figure showing how to create a new model.
@@ -503,10 +503,10 @@ image::AITrainingSelectImages.png[width="800"]
 * Select images from the iPad to add them to the model.
 * Click the `Add` button to load images the selected images.
 
-
-
-
-
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
 
 ==== Labelling the Added Images
 .Figure showing how to load the model to label images.
@@ -530,22 +530,22 @@ image::AITrainingNumberOfImagesLabelled.png[width="800"]
 * Save your current progress at any point and return later to label the images again.
 * Track your progress of the number of labelled images for each model using the progress bar.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
 
 ==== Model Training
 .Figure showing how to start training the model.
@@ -559,22 +559,22 @@ image::AITrainingTrainModel.png[width="800"]
 . Note that clickling on the `Train` button when the model is already training will not restart the training.
 ====
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
 
 ==== Download Models
 .Figure showing how to download model.
