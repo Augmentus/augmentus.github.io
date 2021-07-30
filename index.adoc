@@ -14,7 +14,7 @@ ifdef::env-github[]
 endif::[]
 :repoURL: https://github.com/Augmentus/Augmentus-MainApp
 
-By: `Team Augmentus`      Since: `Nov 2019`      
+By: `Team Augmentus`     
 
 == Introduction
 
