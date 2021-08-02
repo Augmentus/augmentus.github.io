@@ -70,6 +70,96 @@ If you have trouble login in to your account. Please contact Augmentus Support a
 
 == Features
 
+=== AI Training
+[#aitraining]
+AI Model Builder allow users to train machine learning models that are used for object detection all within the `AugmentusApp`. Users can then integrate the ai model to their Robot Path Planning.
+To navigate to the AI Model Builder page, click on the `Model Builder` tab in the <<Legends2,navigation sidebar>>.
+
+[NOTE]
+Using the Augmentus's `AI Model Builder` requires persistent internet connection during labelling / training.
+
+.Figure showing the page for training AI models.
+image::AITrainingAIModelBuilder.png[width="800"]
+
+You should see the AI Model Builder page similar to the figure above.
+
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+{zwsp} +
+
+==== Collecting Images
+* Collect the images using the iPad's camera or transfer images onto the iPad.
+
+[TIP]
+====
+. Take images of objects at various angles and backgrounds to improve model accuracy.
+. Take images of objects with background of real environment to suppress false detections.
+. Recommend around 30 images per class to train the model. However, if there are many classes, more than 30 images per class might be required.
+====
+
+
+==== AI Model Creation 
+.Figure showing how to create a new model.
+image::AITrainingCreateModel.png[width="800"]
+* Click on the `New Model` button at the top-right hand corner of the page to create a new AI Model.
+
+.Figure showing where to name the new model.
+image::AITrainingEnterModelName.png[width="800"]
+
+. Enter the model name in the text field.
+. Click the `Create Model` button.
+
+==== Insert Images to the model
+.Figure showing how to load images from iPad.
+image::AITrainingAddImage.png[width="800"]
+
+.Figure showing how to select and add images to the model.
+image::AITrainingSelectImages.png[width="800"]
+* Select images from the iPad to add them to the model.
+* Click the `Add` button to load images the selected images.
+
+==== Labelling the Added Images
+.Figure showing how to load the model to label images.
+image::AITrainingClickModelToLabel.png[width="800"]
+* Click on the model to start labelling the images.
+
+.Figure showing how to label an image.
+image::AITrainingLabelImage.png[width="800"]
+* Select the image in the bottom slider to start labelling.
+* Click and drag to draw bounding boxes around the objects on the image.
+* Type in the name of the object.
+* Click on the `Add` button to add the labelled object.
+* Click on the `Save` button to save the labelled objects of the current image.
+* Use the bottom slider to navigate to the different images.
+* Click on the `Back` button to return the AI Model Builder page.
+[TIP]
+Avoid retyping the same object name by clicking on the names in the Archived object names list.
+
+.Figure showing the number of images that are labelled in model.
+image::AITrainingNumberOfImagesLabelled.png[width="800"]
+* Save your current progress at any point and return later to label the images again.
+* Track your progress of the number of labelled images for each model using the progress bar.
+
+==== Model Training
+.Figure showing how to start training the model.
+image::AITrainingTrainModel.png[width="800"]
+* Click on `Train` button to start training the model.
+* Click on the `Confirm` button to start training.
+
+[NOTE]
+====
+. Users are limited to train one model at a time for each account, excess training jobs will be put in a queue.
+. Note that clickling on the `Train` button when the model is already training will not restart the training.
+====
+
+==== Download Models
+.Figure showing how to download model.
+image::AITrainingDownloadModel.png[width="800"]
+* Note that the model will turn green when the training is completed successfully.
+* Click on the `Download` button to download the model onto the iPad.
+
 === Augger `Scanner`
 // tag::scanning[]
 [#scanning]
@@ -103,6 +193,53 @@ image::DragtoUploadMesh.png[width="800"]
 * Proceed onto the `AugmentusApp` and move to the `CAD/Mesh` tab. Your mesh will load automatically upon Dragging down on the Downloaded Section.
 // end::scanning[]
 
+=== Download Robot Models: `Robot Models`
+// tag::robotmodel[]
+[#robotmodel]
+
+* Navigate to the `Robot Models` Tab by using the Navigation Sidebar shown <<Legends2, here>>
+
+.Figure showing Loadout tab.
+image::robotmodeltab.png[width="800"]
+
+* Choose the Robot Model that you want to download and click download.
+
+// end::robotmodel[]
+
+// tag::loadout[]
+[#loadout]
+=== Robot Loadout : `Loadout`
+*Creating a Robot Loadout*
+
+
+* Navigate to the `Loadout` Tab by using the Navigation Sidebar shown <<Legends2, here>>
+
+.Figure showing Loadout tab.
+image::Loadouttab.png[width="800"]
+
+* Click on the `New Loadout` button as shown on the diagram above.
+* Click into the newly created `Loadout` to configure the settings.
+
+.Figure showing Robot Loadout tab.
+image::RobotLoadout.png[width="800"]
+
+* In the Robot Loadout, proceed to choose the Robot Model.
+[NOTE]
+You can download your desired `Robot Model` by following the guide <<robotmodel, here>>.
+
+.Figure showing Tool Loadout tab.
+image::Toolloadout.png[width="800"]
+
+* After choosing your Robot Model, you can insert your Tool tip (if any) by clicking on the tools in the `Tools Tab` as shown in the figure above.
+
+.Figure showing Tool Centre Point Calibration tab.
+image::LoadoutTCP.png[width="800"]
+
+* Users can also configure the TCP(Tool Centre Point) to their desired offset by Selecting the `TCP` tab.
+
+
+// end::loadout[]
+
 [TIP]
 ====
 . Move slowly during the scan and avoid sudden movement.
@@ -126,6 +263,7 @@ image::DragtoUploadMesh.png[width="800"]
 {zwsp} +
 {zwsp} +
 {zwsp} +
+
 // tag::projectcreation[]
 [#createproject]
 === Project Creation
@@ -372,66 +510,6 @@ Once you've send the AI Model once, you do not need to resend the AI Model in th
 Contact support@augmentus.tech if you have trouble connecting to the AI Controller. 
 . Finally, click the Play button to send the Robot Script to the AIController for real life robot simulation.
 
-
-// end::robotplanning[]
-
-{zwsp} +
-{zwsp} +
-{zwsp} +
-{zwsp} +
-{zwsp} +
-{zwsp} +
-{zwsp} +
-{zwsp} +
-
-=== Download Robot Models: `Robot Models`
-// tag::robotmodel[]
-[#robotmodel]
-
-* Navigate to the `Robot Models` Tab by using the Navigation Sidebar shown <<Legends2, here>>
-
-.Figure showing Loadout tab.
-image::robotmodeltab.png[width="800"]
-
-* Choose the Robot Model that you want to download and click download.
-
-// end::robotmodel[]
-
-=== Robot Loadout : `Loadout`
-// tag::loadout[]
-[#loadout]
-*Creating a Robot Loadout*
-
-
-* Navigate to the `Loadout` Tab by using the Navigation Sidebar shown <<Legends2, here>>
-
-.Figure showing Loadout tab.
-image::Loadouttab.png[width="800"]
-
-* Click on the `New Loadout` button as shown on the diagram above.
-* Click into the newly created `Loadout` to configure the settings.
-
-.Figure showing Robot Loadout tab.
-image::RobotLoadout.png[width="800"]
-
-* In the Robot Loadout, proceed to choose the Robot Model.
-[NOTE]
-You can download your desired `Robot Model` by following the guide <<robotmodel, here>>.
-
-.Figure showing Tool Loadout tab.
-image::Toolloadout.png[width="800"]
-
-* After choosing your Robot Model, you can insert your Tool tip (if any) by clicking on the tools in the `Tools Tab` as shown in the figure above.
-
-.Figure showing Tool Centre Point Calibration tab.
-image::LoadoutTCP.png[width="800"]
-
-* Users can also configure the TCP(Tool Centre Point) to their desired offset by Selecting the `TCP` tab.
-
-
-// end::loadout[]
-
-
 === Save waypoints as template
 [#templating]
 Users can save waypoints from one project and load it in another project.
@@ -442,7 +520,7 @@ image::TreeViewButton.png[width="800"]
 . Click on the `TreeView` button.
 
 .Showing the template buttons.
-image::TemplateButtonNaming.png[width="800"]
+image::TemplateButton.png[width="800"]
 
 . Click on the `template` button.
 
@@ -453,132 +531,11 @@ image::TemplateButtonNaming.png[width="800"]
 [NOTE]
 After saving the template, you can now load it in any project.
 
-=== AI Training
-[#aitraining]
-AI Model Builder allow users to train machine learning models that are used for object detection all within the `AugmentusApp`. Users can then integrate the ai model to their Robot Path Planning.
-To navigate to the AI Model Builder page, click on the `Model Builder` tab in the <<Legends2,navigation sidebar>>.
 
-.Figure showing the page for training AI models.
-image::AITrainingAIModelBuilder.png[width="800"]
-
-You should see the AI Model Builder page similar to the figure above. 
+// end::robotplanning[]
 
 
-==== Collecting Images
-* Collect the images using the iPad's camera or transfer images onto the iPad.
 
-[TIP]
-====
-. Take images of objects at various angles and backgrounds to improve model accuracy.
-. Take images of objects with background of real environment to suppress false detections.
-. Recommend around 30 images per class to train the model. However, if there are many classes, more than 30 images per class might be required.
-====
-
-{zwsp} +
-{zwsp} +
-{zwsp} +
-{zwsp} +
-{zwsp} +
-{zwsp} +
-
-==== AI Model Creation 
-.Figure showing how to create a new model.
-image::AITrainingCreateModel.png[width="800"]
-* Click on the `New Model` button at the top-right hand corner of the page to create a new AI Model. 
-
-.Figure showing where to name the new model.
-image::AITrainingEnterModelName.png[width="800"]
-
-. Enter the model name in the text field.
-. Click the `Create Model` button.
-
-==== Insert Images to the model
-.Figure showing how to load images from iPad.
-image::AITrainingAddImage.png[width="800"]
-
-.Figure showing how to select and add images to the model.
-image::AITrainingSelectImages.png[width="800"]
-* Select images from the iPad to add them to the model.
-* Click the `Add` button to load images the selected images.
-
-{zwsp} +
-{zwsp} +
-{zwsp} +
-{zwsp} +
-
-==== Labelling the Added Images
-.Figure showing how to load the model to label images.
-image::AITrainingClickModelToLabel.png[width="800"]
-* Click on the model to start labelling the images.
-
-.Figure showing how to label an image.
-image::AITrainingLabelImage.png[width="800"]
-* Select the image in the bottom slider to start labelling.
-* Click and drag to draw bounding boxes around the objects on the image.
-* Type in the name of the object.
-* Click on the `Add` button to add the labelled object.
-* Click on the `Save` button to save the labelled objects of the current image.
-* Use the bottom slider to navigate to the different images.
-* Click on the `Back` button to return the AI Model Builder page.
-[TIP]
-Avoid retyping the same object name by clicking on the names in the Archived object names list.
-
-.Figure showing the number of images that are labelled in model.
-image::AITrainingNumberOfImagesLabelled.png[width="800"]
-* Save your current progress at any point and return later to label the images again.
-* Track your progress of the number of labelled images for each model using the progress bar.
-
-{zwsp} +
-{zwsp} +
-{zwsp} +
-{zwsp} +
-{zwsp} +
-{zwsp} +
-{zwsp} +
-{zwsp} +
-{zwsp} +
-{zwsp} +
-{zwsp} +
-{zwsp} +
-{zwsp} +
-{zwsp} +
-{zwsp} +
-{zwsp} +
-
-==== Model Training
-.Figure showing how to start training the model.
-image::AITrainingTrainModel.png[width="800"]
-* Click on `Train` button to start training the model.
-* Click on the `Confirm` button to start training.
-
-[NOTE]
-====
-. Users are limited to train one model at a time for each account, excess training jobs will be put in a queue.
-. Note that clickling on the `Train` button when the model is already training will not restart the training.
-====
-
-{zwsp} +
-{zwsp} +
-{zwsp} +
-{zwsp} +
-{zwsp} +
-{zwsp} +
-{zwsp} +
-{zwsp} +
-{zwsp} +
-{zwsp} +
-{zwsp} +
-{zwsp} +
-{zwsp} +
-{zwsp} +
-{zwsp} +
-{zwsp} +
-
-==== Download Models
-.Figure showing how to download model.
-image::AITrainingDownloadModel.png[width="800"]
-* Note that the model will turn green when the training is completed successfully.
-* Click on the `Download` button to download the model onto the iPad.
 
 
 ////
